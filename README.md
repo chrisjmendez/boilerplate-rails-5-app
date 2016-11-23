@@ -3,8 +3,11 @@
 After creating a dozen or so Ruby on Rails app, I realized I was using the same configuration over and over again. This boilerplate code is intended to simply save time building a Rails 5.0+ app.
 
 
+#### Cliffs Notes
 
-### Development
+If you want to see an itemized list of modifications, I suggest reviewing the cliff notes within ```lib/tasks/app.rake```
+
+### Development Gems
 
 - Dotenv for storing imporant data
 - Rerun watcher to help with automatic server restarts
@@ -18,7 +21,7 @@ After creating a dozen or so Ruby on Rails app, I realized I was using the same 
 - Bootstrap for HTML + CSS templates
 
 
-### Testing
+### Testing Gems
 
 - Populator and Faker for creating fake data
 - Rspec for testing
@@ -28,11 +31,6 @@ After creating a dozen or so Ruby on Rails app, I realized I was using the same 
 
 ---
 
-# Cliff Notes
-
-If you want to see an itemized list of modifications, I suggest reviewing the cliff notes within ```lib/tasks/app.rake```
-
----
 
 # Managing Local Server
 
