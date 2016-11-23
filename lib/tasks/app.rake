@@ -81,7 +81,7 @@ namespace :app do
   # Domain Specific App Logic
   # ## ## ## ## ## ## ## ## ## ## ## ## ## 
 
-
+  
   
   # ## ## ## ## ## ## ## ## ## ## ## ## ## 
   # Save using Git and Github
@@ -96,7 +96,7 @@ namespace :app do
     # Review changes
     sh %{ git status }
     # Commit changes with a message
-    sh %{ git commit -m 'Inittial import' }
+    sh %{ git commit -m 'Initial import' }
     # Check the log 
     sh %{ git log  }
   end
@@ -104,6 +104,8 @@ namespace :app do
   task save_to_github: :environment do 
     # Tell git add Github as the origin for the master branch
     sh %{ git remote add origin git@github.com:[username]/[app_name].git}
+    # Pull any data initially created in Github
+    sh %{ git pull origin master }
     # Push the local repo to Github (the remote repository)
     sh %{ git push -u origin master  }    
   end
