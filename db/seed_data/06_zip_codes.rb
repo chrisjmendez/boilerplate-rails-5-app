@@ -32,8 +32,7 @@ class ZipCodeUtil
     rows = csv.read(INPUT_FILE)
     
     locations = rows.each_with_index.map do |row, idx|
-      puts %{ #{idx} out of #{rows.size} }
-      
+      #puts %{ #{idx} out of #{rows.size} }
       Location.create(
       :zip_code       => row[:zip_code],
       :zip_code_type  => row[:zipcodetype],
