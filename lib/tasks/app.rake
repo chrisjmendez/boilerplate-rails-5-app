@@ -8,6 +8,8 @@ namespace :app do
   task step_one: :environment do
     # Create a new rails app
     sh %{ rails _5.0.0_ new my-app --force -d postgresql --skip-bundle }
+    # Configure your databases: development, test, and production
+    sh %{ Modify 'config/database.yml' }
     # Change directory into the rails app
     sh %{ cd my-app }
     # Create a .gitignore
