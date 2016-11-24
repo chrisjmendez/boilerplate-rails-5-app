@@ -46,8 +46,20 @@ namespace :app do
     sh %{ rails db:create }
   end
 
-  # Configuring gems
+  # Configuring Simple Form
   task step_four: :environment do
+    # Configure HAML, Rspec and Factory Girl => config/application.rb
+    sh %{ echo "Look below at insert_into_application, copy and paste to 'config/application.rb'" }
+
+    # Configure Simple Form (https://github.com/plataformatec/simple_form)
+    sh %{ rails g simple_form:install --bootstrap }
+    
+    # Configure Bootstrap
+    sh %{ echo "Follow these instructions => https://github.com/twbs/bootstrap-rubygem" }    
+  end
+
+  # Configuring Devise
+  task step_five: :environment do
     # Configure HAML, Rspec and Factory Girl => config/application.rb
     sh %{ echo "Look below at insert_into_application, copy and paste to 'config/application.rb'" }
 
@@ -63,7 +75,8 @@ namespace :app do
     sh %{ rails g devise User }
     sh %{ echo "Follow the instructions on the prompt." }
     sh %{ rails g devise:views }
-          
+    # Adding E-mail confirmation
+
     # Update Database
     sh %{ rails db:migrate }  
     
@@ -77,7 +90,31 @@ namespace :app do
     # You do this after you've created devise:views
     sh %{ rails rake haml:replace_erbs }
   end
+  
+  # Expanding Devise to include E-mail confirmation 
+  # http://www.chrisjmendez.com/2016/06/23/rails-devise#emailconfirmation
+  # https://github.com/plataformatec/devise/wiki/How-To:-Add-:confirmable-to-Users
+  task step_five: :environment do
+    sh %{ echo "add :confirmable" to models/user.rb }
+    sh %{ echo "Remove commentes from /db/migrate/YYYYMMDDxxx_devise_create_users.rb" }
+    sh %{ rails g migration add_confirmable_to_devise 
+      unconfirmed_email:string 
+      confirmation_token:token:unique:index
+      confirmed_at:datetime 
+      confirmation_sent_at:datetime 
+      password_reset_token:token   
+    }
+    sh %{  }    
+  end
 
+  # Convert all .erb files to .haml
+  # We're doing this after Devise so that we can modify those views too
+  task step_six: :environment do
+    # Replace .ERB to .HAML (https://github.com/dhl/erb2haml)
+    # You do this after you've created devise:views
+    sh %{ rails rake haml:replace_erbs }
+  end
+  
 
   # ## ## ## ## ## ## ## ## ## ## ## ## ## 
   # Domain Specific App Logic
@@ -129,4 +166,21 @@ def insert_into_application
     # Use Factory girl
     g.fixture_replacement :factory_girl, dir: 'spec/factories'
   end
+end
+
+def add_smtp_to_config
+  #CHANGED
+  #config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.delivery_method = :smtp  
+  config.action_mailer.perform_deliveries = true  
+  config.action_mailer.raise_delivery_errors = true  
+  config.action_mailer.smtp_settings = {  
+       :address => "smtp.mailgun.org",
+       #:port => 587,
+       :domain => "mydomain.com",
+       :user_name => "my_username",
+       :password => "S0M3P@Sswd",
+       :authentication => 'plain',
+       :enable_starttls_auto => true
+  }
 end

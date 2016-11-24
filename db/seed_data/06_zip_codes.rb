@@ -50,4 +50,5 @@ class ZipCodeUtil
   end
 end
 
-ZipCodeUtil.new
+# This takes a long time to load so be careful
+# ZipCodeUtil.new
