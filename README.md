@@ -47,3 +47,23 @@ Completely destroy a database and re-build it with seed data
 rails db:wipe
 ```
 
+---
+
+# Tests
+
+### Populating and Testing
+
+
+```language-powerbash
+rails db:wipe RAILS_ENV=test --trace
+```
+
+```language-powerbash
+rails db:migrate RAILS_ENV=test --trace
+```
+
+```language-powerbash
+rails db:seed RAILS_ENV=test --trace
+```
+
+
