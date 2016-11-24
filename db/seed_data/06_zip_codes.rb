@@ -18,7 +18,7 @@ end
 class ZipCodeUtil
   
   CURRENT_DIR = File.dirname(__FILE__)  
-  INPUT_FILE = File.join(CURRENT_DIR, "seed_data", "free-zipcode-database.csv")
+  INPUT_FILE = File.join(CURRENT_DIR, "raw_data", "free-zipcode-database.csv")
   
   def initialize
     import
@@ -32,10 +32,11 @@ class ZipCodeUtil
     rows = csv.read(INPUT_FILE)
     
     locations = rows.each_with_index.map do |row, idx|
-      #puts %{ #{idx} out of #{rows.size} }
+      puts %{ #{idx} out of #{rows.size} }
+      
       Location.create(
       :zip_code       => row[:zip_code],
-      :zip_cody_type  => row[:zipcodetype],
+      :zip_code_type  => row[:zipcodetype],
       :city           => row[:city],
       :state          => row[:state],
       :lat            => row[:lat].to_f,
