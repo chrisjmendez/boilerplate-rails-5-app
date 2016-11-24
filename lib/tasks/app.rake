@@ -83,9 +83,10 @@ namespace :app do
   # Domain Specific App Logic
   # ## ## ## ## ## ## ## ## ## ## ## ## ## 
   
-  # Create a Location Model that parses zip code data from a CSV file
-  sh %{ rails g model Location zip_code:integer zip_code_type:string city:string state:string lat:float lng:float country:string location_text:string location:string estimated_population:integer total_wages:decimal }
-  
+  task app_logic: :environment do
+    # Create a Location Model that parses zip code data from a CSV file
+    sh %{ rails g model Location zip_code:integer zip_code_type:string city:string state:string lat:float lng:float country:string location_text:string location:string estimated_population:integer total_wages:decimal }
+  end
   
   # ## ## ## ## ## ## ## ## ## ## ## ## ## 
   # Save using Git and Github
