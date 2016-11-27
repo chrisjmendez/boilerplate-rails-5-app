@@ -22,6 +22,9 @@ namespace :app do
   task step_two: :environment do
     # Set up Rspec
     sh %{ rails g rspec:install }
+    # Spring is a Rails app preloader. It speeds up development by keeping your app running 
+    #    in the background so you don't need to boot it every time you run a test, rake task or migration.
+    sh %{ bundle exec spring binstub --all }
     # Create macro tasks to speed up the dev process
     sh %{ rails g task app initialize }
     # This will completely wipe the database, create it, update the tables and populate the data
