@@ -1,25 +1,25 @@
 namespace :test do
-  desc "›› Rspec drop test database"
+  desc "›› Drop test database"
   task drop: :environment do
     sh %{ bundle exec rails db:drop RAILS_ENV=test }
   end
 
-  desc "›› Rspec create test database"
+  desc "›› Create test database"
   task create: :environment do
     sh %{ bundle exec rails db:create RAILS_ENV=test }
   end
 
-  desc "›› Rspec load test database"
+  desc "›› Load test database"
   task load: :environment do
     sh %{ bundle exec rails db:schema:load RAILS_ENV=test }
   end
 
-  desc "›› Rspec seed database"
+  desc "›› Seed database"
   task seed: :environment do
     sh %{ bundle exec rails db:seed RAILS_ENV=test }
   end
   
-  desc "›› Rspec wipe test database"
+  desc "›› Wipe test database"
   task wipe: :environment do
     sh %{ bundle exec rails db:purge db:create db:seed RAILS_ENV=test }
   end

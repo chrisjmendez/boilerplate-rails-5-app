@@ -20,6 +20,8 @@ namespace :app do
   
   # Explainer: http://www.chrisjmendez.com/2016/07/31/rails-5-tasks/
   task step_two: :environment do
+    # Set up Rspec
+    sh %{ rails g rspec:install }
     # Create macro tasks to speed up the dev process
     sh %{ rails g task app initialize }
     # This will completely wipe the database, create it, update the tables and populate the data
