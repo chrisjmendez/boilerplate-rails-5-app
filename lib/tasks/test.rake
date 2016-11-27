@@ -13,6 +13,11 @@ namespace :test do
   task load: :environment do
     sh %{ bundle exec rails db:schema:load RAILS_ENV=test }
   end
+
+  desc "›› Rspec seed database"
+  task seed: :environment do
+    sh %{ bundle exec rails db:seed RAILS_ENV=test }
+  end
   
   desc "›› Rspec wipe test database"
   task wipe: :environment do
