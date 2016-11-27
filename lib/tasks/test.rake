@@ -21,6 +21,6 @@ namespace :test do
   
   desc "›› Rspec wipe test database"
   task wipe: :environment do
-    sh %{ bundle exec rails db:purge db:create db:schema:load RAILS_ENV=test }
+    sh %{ bundle exec rails db:purge db:create db:seed RAILS_ENV=test }
   end
 end
