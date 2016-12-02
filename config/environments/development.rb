@@ -58,13 +58,15 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp  
   config.action_mailer.perform_deliveries = true  
   config.action_mailer.raise_delivery_errors = true 
-  config.action_mailer.smtp_settings = {  
-       :address => "smtp.mailgun.org",
-       #:port => 587,
-       :domain => "domain.com",
-       :user_name => "postmaster@domain.com",
-       :password => "abcdefg12345",
-       :authentication => 'plain',
-       :enable_starttls_auto => true
+  config.action_mailer.smtp_settings = {
+    # Add your personal credentials through .env
+    :address   => ENV['EMAIL_SERVICE_SMTP'],
+    #:port     => 587,
+    :domain    => ENV['EMAIL_SERVICE_DOMAIN'],
+    :user_name => ENV['EMAIL_SERVICE_USER'],
+    :password  => ENV['EMAIL_SERVICE_PASS'],
+    :authentication => 'plain',
+    # http://stackoverflow.com/questions/5882855/problem-with-actionmailer-in-rails3-ssl-hostname-was-not-match-with-the-server
+    :enable_starttls_auto => true
   }
 end
