@@ -1,30 +1,28 @@
-class UserUtil
-  def initialize
-    populate
-  end  
-  
-  def populate
-    email = "a@maildrop.cc"
-    password = "password"
-    
-    User.delete_all
-    
-    #This is specifically designed 
-    User.populate(1) do |u|
-      u.email         = email
-      u.encrypted_password = BCrypt::Password.create(password)  
-      
-      u.sign_in_count = 0
-    end          
-    
-    # Completely random data
-    User.populate(10) do |u|
-      u.email = Faker::Internet.email
-      u.encrypted_password = BCrypt::Password.create( Faker::Internet.password(8, 20, true) )  
-      u.sign_in_count = 0
-    end
+User.delete_all
 
-  end
+# Admin - Confirmed E-mail
+email = "a@maildrop.cc"
+password = "password"
+User.populate(1) do |u|
+  u.email         = email
+  u.encrypted_password = BCrypt::Password.create(password)
+  u.sign_in_count = 0
+  u.confirmed_at = Time.now
 end
 
-UserUtil.new
+# Admin - Non-Confirmed E-mail
+email = "a@mailinator.com"
+password = "password"
+User.populate(1) do |u|
+  u.email         = email
+  u.encrypted_password = BCrypt::Password.create(password)
+  u.sign_in_count = 0
+end
+
+# Fake Accounts
+User.populate(3) do |u|
+  u.email = Faker::Internet.email
+  u.encrypted_password = BCrypt::Password.create( Faker::Internet.password(8, 20, true) )  
+  u.sign_in_count = 0
+end
+

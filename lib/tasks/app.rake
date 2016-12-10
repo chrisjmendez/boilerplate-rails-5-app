@@ -79,6 +79,7 @@ namespace :app do
     sh %{ rails g devise:install }
     sh %{ rails g devise User }
     sh %{ echo "Follow the instructions on the prompt." }
+    sh %{ rails g devise:controllers users }    
     sh %{ rails g devise:views }
     # Adding E-mail confirmation
 

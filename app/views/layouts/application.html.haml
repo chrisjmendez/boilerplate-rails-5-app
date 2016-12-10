@@ -2,11 +2,20 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title TwoSidedMarketplace
+    %title Boilerplate Rails 5
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %p.notice= notice
-    %p.alert= alert
-    = yield
+    = render 'home/nav'
+
+    .container
+
+      %p.notice= notice
+      %p.alert= alert
+
+      = yield
+
+      = render 'home/footer'
+
+      = render 'home/debug'

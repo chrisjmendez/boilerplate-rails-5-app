@@ -1,2 +1,77 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.haml
+.container
+  .bs-docs-section
+    .row
+      .col-lg-12
+        .jumbotron
+          %h1 Ruby on Rails 5 Framework
+          %p After creating a dozen or so Ruby on Rails app, I realized I was using the same configuration over and over again. This boilerplate code is intended to simply save time building a Rails 5.0+ app.
+          %p= link_to "Read Me", "https://github.com/chrisjmendez/boilerplate-rails-5-app/blob/master/README.md", target: "_new", class: "btn btn-primary btn-lg"
+  
+  .bs-docs-section
+    .col-lg-4
+      .bs-component
+        %h2 Getting Started
+        %p
+          After downloading this repo, run these commands.
+        %p
+          Step #1
+          Install all the necessary gems.
+          %pre
+            bundle install
+        %p
+          Step #2.
+          Destroy and rebuild the test database. Populate it with test data
+          %pre
+            rails db:wipe
+        %p
+          Step #3
+          Start the server
+          %pre
+            rails server:start
+    .col-lg-4
+      %h2 GEMS
+      %p
+        These are the gems we're using for development.  
+      %ul
+        %li.text-muted= link_to "Rails Composer", "https://github.com/RailsApps/rails-composer"
+        %li.text-primary= link_to "Postgres", "https://rubygems.org/gems/pg"
+        %li.text-warning= link_to "Dotenv", "https://rubygems.org/gems/dotenv"
+        %li.text-danger= link_to "Rerun", "https://rubygems.org/gems/rerun/versions/0.11.0"
+        %li.text-success= link_to "ERB to HAML", "https://rubygems.org/gems/erb2haml"
+        %li.text-info= link_to "Devise", "https://rubygems.org/gems/devise"
+        %li.text-muted= link_to "High Voltage", "https://rubygems.org/gems/high_voltage"
+        %li.text-primary= link_to "Font Awesome", "https://rubygems.org/gems/font-awesome-rails"
+        %li.text-warning= link_to "Simple Form", "https://rubygems.org/gems/simple_form"
+        %li.text-danger= link_to "HAML", "https://rubygems.org/gems/haml"
+        %li.text-success= link_to "SASS", "https://rubygems.org/gems/sass-rails"
+        %li.text-info= link_to "Paperclip", ""
+        %li.text-muted= link_to "Bootstrap", "https://rubygems.org/gems/bootstrap"
+
+    .col-lg-4
+      .bs-component
+        %h2 How to test this demo
+        %p
+          Try out the boilerplate code by using these two accounts.
+      .panel.panel-default
+        .panel-heading 
+          Administrator
+        .panel-body
+          Login:
+          %pre
+            = %{ #{@admin.email} }
+        .panel-body
+          Password:
+          %pre
+            password
+      .panel.panel-default
+        .panel-heading
+          User
+        .panel-body
+          Login:
+          %pre
+            = %{ #{@user.email} }
+        .panel-body
+          Password:
+          %pre
+            password
+      

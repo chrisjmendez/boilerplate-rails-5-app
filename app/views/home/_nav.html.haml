@@ -1,0 +1,57 @@
+%nav.navbar.navbar-default
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{:href => "/"} Boilerplate Rails 5
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        %li
+          %a{:href => "/about"}
+            About
+            %span.sr-only (current)
+        %li.dropdown
+          %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+            My Account
+            %span.caret
+          %ul.dropdown-menu{:role => "menu"}
+            - if user_signed_in?
+              %li
+                = link_to_unless_current "My Account", "/edit_registration"
+              %li.divider
+              %li
+                = link_to_unless_current "#{current_user.email}", edit_user_password_path
+              %li
+                %a{:href => "/sign_out"} Sign Out
+            - else
+              %li
+                %a{:href => "/sign_in"} Sign In
+              %li.divider
+              %li
+                %a{:href => "/sign_up"} Register
+
+      %form.navbar-form.navbar-left{:role => "search"}
+        .form-group
+          %input.form-control{:placeholder => "Search", :type => "text"}/
+        %button.btn.btn-default{:type => "submit"} Submit
+
+      %ul.nav.navbar-nav.navbar-right
+        %li.dropdown
+          %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+            Useful Links
+            %span.caret
+          %ul.dropdown-menu{:role => "menu"}
+            %li
+              %a{:href => "https://github.com/chrisjmendez/boilerplate-rails-5-app", target: "_new"} Github Repo
+            %li.divider
+            %li
+              %a{:href => "http://bootswatch.com/paper/", target: "_new"} Bootswatch Theme
+            %li
+              %a{:href => "http://htmltohaml.com/", target: "_new"} HTML to HAML
+            %li
+              %a{:href => "http://js2.coffee/", target: "_new"} Javascript to CoffeeScript
+            %li
+              %a{:href => "http://fontawesome.io/icons/", target: "_new"} Font Awesome

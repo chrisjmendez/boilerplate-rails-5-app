@@ -18,6 +18,11 @@ You'll need to do a few things to get up-and-running.  Here are a few items:
 
 If you want to see an itemized list of modifications, I suggest reviewing the cliff notes within ```lib/tasks/app.rake```
 
+
+#### OmniAuth Data
+
+* [Facebook Info ID](https://developers.facebook.com/docs/graph-api/reference/user/)
+
 ---
 
 # Managing Libraries
@@ -67,4 +72,9 @@ Simply populate the test database with seed data. This is the alternative to ```
 rails db:seed RAILS_ENV=test --trace
 ```
 
+# Resources
+
+* [How to configure Devise and OmniAuth](https://www.digitalocean.com/community/tutorials/how-to-configure-devise-and-omniauth-for-your-rails-application)
+* [Javascript to Coffee](http://js2.coffee/)
+* [HTML to HAML](http://htmltohaml.com/)
 
