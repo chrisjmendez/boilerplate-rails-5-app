@@ -17,3 +17,7 @@
   - resource_class.omniauth_providers.each do |provider|
     = link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider)
     %br/
+
+  /= link_to icon("twitter",  class: "big", aria: { hidden: true }), user_twitter_omniauth_authorize_path
+  /= link_to icon("facebook", class: "big", aria: { hidden: true }), user_facebook_omniauth_authorize_path
+  /= link_to icon("linkedin", class: "big", aria: { hidden: true }), user_linkedin_omniauth_authorize_path

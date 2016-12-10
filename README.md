@@ -11,6 +11,7 @@ You'll need to do a few things to get up-and-running.  Here are a few items:
 * Update your database with ```rails db:wipe```
 * Start your web server with ```rails server:start```
 * Create an account with [http://mailgun.com](http://mailgun.com) and update your SMPT data in ```config/environments/development.rb```.
+* Change your ```ENV['SECRET_KEY_BASE']``` [Source](https://matt.aimonetti.net/posts/2013/11/30/sharing-rails-sessions-with-non-ruby-apps/)
 
 ---
 
@@ -77,4 +78,4 @@ rails db:seed RAILS_ENV=test --trace
 * [How to configure Devise and OmniAuth](https://www.digitalocean.com/community/tutorials/how-to-configure-devise-and-omniauth-for-your-rails-application)
 * [Javascript to Coffee](http://js2.coffee/)
 * [HTML to HAML](http://htmltohaml.com/)
-
+* [Devise AJAX Authentication](http://blog.andrewray.me/how-to-set-up-devise-ajax-authentication-with-rails-4-0/)

@@ -18,13 +18,15 @@
               request
             %fieldset#params_debug_info.debug_info{:style => "display: none"}
               %legend params
-              = debug(params)
+              /= debug(params)
+              = debug(JSON.pretty_generate(params.to_a))
+              
             %fieldset#session_debug_info.debug_info{:style => "display: none"}
               %legend session
               = debug(session)
             %fieldset#env_debug_info.debug_info{:style => "display: none"}
               %legend env
-              = debug(request.env)
+              = debug(JSON.pretty_generate(request.env.to_a))
             %fieldset#request_debug_info.debug_info{:style => "display: none"}
               %legend request
               = debug(request)
