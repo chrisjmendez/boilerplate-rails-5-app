@@ -39,7 +39,19 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Authentication
 # ###
 # You may need to request from the source for Rails 5
-gem 'devise', git: 'https://github.com/plataformatec/devise.git'  
+gem 'devise', '~> 4.2.0'
+# https://github.com/cowboyd/therubyracer
+gem "therubyracer"
+# https://github.com/omniauth/omniauth
+# gem 'omniauth'
+# Facebook OmniAuth Strategy https://github.com/mkdynamic/omniauth-facebook
+# gem 'omniauth-facebook'
+# https://github.com/arunagw/omniauth-twitter
+# gem 'omniauth-twitter'
+# https://github.com/skorks/omniauth-linkedin
+# gem 'omniauth-linkedin'
+# https://github.com/intridea/omniauth-github
+#gem 'omniauth-github'
 
 # ###
 # Configuration
@@ -52,7 +64,7 @@ gem 'rack-cors'
 gem 'active_model_serializers'
 # Environmental variables
 gem 'dotenv-rails', :groups => [:development, :test]
-# Server Watcher
+# Server Watcher https://github.com/alexch/rerun
 gem 'rerun', :groups => [:development, :test]
 
 # ###
@@ -67,7 +79,6 @@ gem 'faker', :groups => [:development, :test]
 gem 'bcrypt'
 
 
-
 # ###
 #Views
 # ###
@@ -77,7 +88,10 @@ gem 'simple_form', '~> 3.2', '>= 3.2.1'
 # HAML template engine https://github.com/indirect/haml-rails
 gem 'haml-rails', '~> 0.9.0'
 # Bootstrap templates https://github.com/twbs/bootstrap-rubygem
-gem 'bootstrap', '~> 4.0.0.alpha5'
+#gem 'bootstrap', '~> 4.0.0.alpha5'
+# Bootswatch themes https://github.com/maxim/bootswatch-rails
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootswatch-rails'
 # Easily include static pages https://github.com/thoughtbot/high_voltage
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
@@ -95,9 +109,14 @@ gem 'font-awesome-sass'
 # ###
 
 # Rspec
-gem 'spring-commands-rspec', :groups => [:development, :test]  
-gem 'rspec-rails', :groups => [:development, :test]  
+gem 'spring-commands-rspec', :groups => [:development, :test]
+gem 'rspec-rails', :groups => [:development, :test]
 # Factory Girl
-gem 'factory_girl_rails', :groups => [:development, :test]  
+gem 'factory_girl_rails', :groups => [:development, :test]
 # Capybara
-gem 'capybara', :groups => [:test]  
+gem 'capybara', :groups => [:test]
+# Make the default logging pretty
+gem 'shog', :groups => [:development, :test]
+# Create custom colors for specific things you want to log
+gem 'colorize'
+# gem 'logstasher'
