@@ -1,0 +1,40 @@
+.container
+
+  .bs-docs-section
+    .row
+      .col-lg-6
+        .bs-component
+          %h2 Set token request beforehand
+          %pre
+            %code.language-javascript
+              :preserve
+                $.ajax({ url: 'YOUR URL HERE',
+                  type: 'POST',
+                  beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                  data: 'someData=' + someData,
+                  success: function(response) {
+                    $('#someDiv').html(response);
+                  }
+                });
+            
+          %p= link_to "Submit", "#", class: "btn btn-primary btn-lg ajax-form"
+
+        .bs-component
+          %h2 Send Token Request in all requests
+          %pre
+            %code.language-javascript
+              :preserve
+                $.ajaxSetup({
+                  headers: {
+                    'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+                  }
+                });
+
+          %p= link_to "Submit", "#", class: "btn btn-primary btn-lg ajax-form"
+
+      .col-lg-6.ajax-response
+        %h2 Results
+        %pre
+          %code.language-javascript
+            :preserve
+              test

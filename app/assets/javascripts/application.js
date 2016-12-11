@@ -17,6 +17,10 @@
 
 
 //CHANGED
+
+// Tether is for both bootstrap and high_voltage
 //= require tether
 //= require bootstrap-sprockets
   
+// This makes pretty looking code highlighting
+//= require prism

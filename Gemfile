@@ -66,6 +66,10 @@ gem 'active_model_serializers'
 gem 'dotenv-rails', :groups => [:development, :test]
 # Server Watcher https://github.com/alexch/rerun
 gem 'rerun', :groups => [:development, :test]
+# Pagination
+gem 'kaminari'
+# PrismJS.com
+gem "prism-rails"
 
 # ###
 # Testing

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # Devise
   # 
   devise_for :users, controllers: {
-    sessions: 'users/sessions',
+    sessions:      'users/sessions',
     registrations: 'users/registrations'
     #omniauth_callbacks: "users/omniauth_callbacks"
   }
@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   # 
   get 'home/index'
   get 'about', to: 'high_voltage/pages#show', id: 'about'
+  get 'ajax', to: 'high_voltage/pages#show', id: 'ajax'
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
