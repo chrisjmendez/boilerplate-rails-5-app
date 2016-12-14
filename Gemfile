@@ -76,9 +76,9 @@ gem "prism-rails"
 # ###
 
 # Populate fake test data
-gem 'populator', :groups => [:development, :test]
+gem 'populator'
 # Populate fake test data
-gem 'faker', :groups => [:development, :test]
+gem 'faker'
 # You need this to turn a password into a hash
 gem 'bcrypt'
 
