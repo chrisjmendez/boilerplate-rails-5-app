@@ -1,3 +1,4 @@
+- #http://guides.rubyonrails.org/debugging_rails_applications.html
 - if Rails.env.development?
   %hr
   .container
@@ -19,14 +20,14 @@
             %fieldset#params_debug_info.debug_info{:style => "display: none"}
               %legend params
               /= debug(params)
-              = debug(JSON.pretty_generate(params.to_a))
+              = debug(JSON.pretty_generate(params.to_h))
               
             %fieldset#session_debug_info.debug_info{:style => "display: none"}
               %legend session
-              = debug(session)
+              = debug(session.to_hash)
             %fieldset#env_debug_info.debug_info{:style => "display: none"}
               %legend env
-              = debug(JSON.pretty_generate(request.env.to_a))
+              = debug(JSON.pretty_generate(request.env.to_h))
             %fieldset#request_debug_info.debug_info{:style => "display: none"}
               %legend request
-              = debug(request)
+              = debug(JSON.pretty_generate(request.env.to_hash))
