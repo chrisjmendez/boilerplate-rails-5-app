@@ -30,14 +30,24 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
-
 # #### #### #### #### #### #### #### #### #### #### #### #### #### #### #### ###
 # COPY GEM'S BELOW
 # #### #### #### #### #### #### #### #### #### #### #### #### #### #### #### ###
 
-# ###
+
+
+# ### ### ### ### ### ### ### ###
+# Benchmarking 
+# https://github.com/schneems/derailed_benchmarks#dynamic-app-benchmarking
+# ### ### ### ### ### ### ### ###
+gem 'derailed_benchmarks', group: :development
+
+
+
+# ### ### ### ### ### ### ### ###
 # Authentication
-# ###
+# ### ### ### ### ### ### ### ###
+
 # You may need to request from the source for Rails 5
 gem 'devise', '~> 4.2.0'
 # https://github.com/cowboyd/therubyracer
@@ -53,9 +63,11 @@ gem "therubyracer"
 # https://github.com/intridea/omniauth-github
 #gem 'omniauth-github'
 
-# ###
+
+
+# ### ### ### ### ### ### ### ###
 # Configuration
-# ###
+# ### ### ### ### ### ### ### ###
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
@@ -71,21 +83,30 @@ gem 'kaminari'
 # PrismJS.com
 gem "prism-rails"
 
-# ###
-# Testing
-# ###
 
-# Populate fake test data
-gem 'populator'
+
+# ### ### ### ### ### ### ### ###
+# Testing
+# ### ### ### ### ### ### ### ###
+
 # Populate fake test data
 gem 'faker'
 # You need this to turn a password into a hash
 gem 'bcrypt'
 
+# Rspec
+gem 'spring-commands-rspec', :groups => [:development, :test]
+gem 'rspec-rails', :groups => [:development, :test]
+# Factory Girl
+gem 'factory_girl_rails', :groups => [:development, :test]
+# Capybara
+gem 'capybara', :groups => [:test]
 
-# ###
-#Views
-# ###
+
+
+# ### ### ### ### ### ### ### ###
+# Views
+# ### ### ### ### ### ### ### ###
 
 # Simplified forms https://github.com/plataformatec/simple_form
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
@@ -108,19 +129,19 @@ gem 'erb2haml', :groups => [:development]
 gem 'font-awesome-sass'
 
 
-# ###
-#Testing
-# ###
 
-# Rspec
-gem 'spring-commands-rspec', :groups => [:development, :test]
-gem 'rspec-rails', :groups => [:development, :test]
-# Factory Girl
-gem 'factory_girl_rails', :groups => [:development, :test]
-# Capybara
-gem 'capybara', :groups => [:test]
+# ### ### ### ### ### ### ### ###
+# Logging
+# ### ### ### ### ### ### ### ###
+
 # Make the default logging pretty
 gem 'shog', :groups => [:development, :test]
-# Create custom colors for specific things you want to log
-gem 'colorize'
-# gem 'logstasher'
+# Advanced Logging
+# gem 'logstasher', :groups => [:development, :test]
+
+
+# ### ### ### ### ### ### ### ###
+# App Specific Gems
+# ### ### ### ### ### ### ### ###
+
+

@@ -8,7 +8,5 @@
 
 
 require 'faker'
-require 'populator'
-require 'bcrypt'
 
 Dir[File.join(Rails.root, 'db', 'seed_data', '*.rb')].sort.each { |seed| load seed }
