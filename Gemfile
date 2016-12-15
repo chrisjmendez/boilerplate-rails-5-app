@@ -40,6 +40,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Benchmarking 
 # https://github.com/schneems/derailed_benchmarks#dynamic-app-benchmarking
 # ### ### ### ### ### ### ### ###
+
+# http://www.schneems.com/2015/05/11/how-ruby-uses-memory.html
 gem 'derailed_benchmarks', group: :development
 
 
@@ -143,5 +145,4 @@ gem 'shog', :groups => [:development, :test]
 # ### ### ### ### ### ### ### ###
 # App Specific Gems
 # ### ### ### ### ### ### ### ###
-
 
