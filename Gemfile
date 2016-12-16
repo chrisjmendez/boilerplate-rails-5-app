@@ -43,7 +43,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # http://www.schneems.com/2015/05/11/how-ruby-uses-memory.html
 gem 'derailed_benchmarks', group: :development
-
+gem 'stackprof', group: :development
 
 
 # ### ### ### ### ### ### ### ###
