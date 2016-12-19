@@ -1,6 +1,9 @@
-namespace :db do    
-  desc %Q{ ›› Drop the db schema, Create a new one, Migrate the data, Populate the data }
+namespace :db do
+  desc %Q{ ›› Drop the db schema, Create a new DB, Migrate the DB, Populate the DB. (Development-mode Only) }
   task wipe: :environment do
-    sh %{ rails db:purge db:create db:migrate db:seed  }
+    # Safe guard #1
+    raise 'You cannot run this in production' if Rails.env.production?
+    # 'skip_prod' is Safe guard #2
+    [ 'skip_prod', 'db:purge', 'db:crate', 'db:migrate', 'db:seed' ]
   end
 end 

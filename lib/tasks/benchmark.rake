@@ -1,7 +1,11 @@
 namespace :benchmark do
   desc %Q{ ›› Benchmark the performance with 500 requests }
   task small: :environment do
-    sh %{ ab -n 500 -c 5 -l http://localhost:3000/keywords }
+    host        = Rails.env.production? ? ENV['HEROKU_URL'] : "http://localhost:3000"
+    path        = "keywords/"
+    requests    = 500
+    connections = 5
+    sh %{ ab -n #{requests} -c #{connections} -l #{host}/#{path} }
   end
 
   desc %Q{ ›› Benchmark the performance with 1000 requests }
