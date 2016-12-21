@@ -32,9 +32,9 @@ namespace :network do
   # UUID Generation is built-in.
   desc %Q{ ›› Get Random UUID }
   task :uuid do  
-    sh %{ require 'securerandom'; SecureRandom.uuid }
+    sh %{ uuidgen | tr -d - | tr -d '\n' | tr '[:upper:]' '[:lower:]'  | pbcopy && pbpaste && echo }
     # Alternative 
-    # sh %{ uuidgen | tr -d - | tr -d '\n' | tr '[:upper:]' '[:lower:]'  | pbcopy && pbpaste && echo }
+    # sh %{ require 'securerandom'; SecureRandom.uuid }
   end
   
 end
