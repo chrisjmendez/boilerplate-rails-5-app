@@ -79,3 +79,4 @@ rails db:seed RAILS_ENV=test --trace
 * [Javascript to Coffee](http://js2.coffee/)
 * [HTML to HAML](http://htmltohaml.com/)
 * [Devise AJAX Authentication](http://blog.andrewray.me/how-to-set-up-devise-ajax-authentication-with-rails-4-0/)
+
