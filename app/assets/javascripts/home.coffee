@@ -2,8 +2,11 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+
+###
 $(document).on 'ready page:load', ->
     Prism.highlightAll()
+
 
 
 $(document).on('click', '.ajax-form', ( ->
@@ -13,6 +16,7 @@ $(document).on('click', '.ajax-form', ( ->
     "remember_me": 1
   getData "/users/sign_in", data
 ));
+
 
 getData = (url, data) ->
   console.log(data)
@@ -55,3 +59,4 @@ parseData = (data) ->
   #console.log 'parseData:', data
   $('.ajax-response code').text JSON.stringify(data, null, '\t')
   return
+###

@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '~> 5.0.0'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
@@ -30,11 +29,10 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
+
 # #### #### #### #### #### #### #### #### #### #### #### #### #### #### #### ###
 # COPY GEM'S BELOW
 # #### #### #### #### #### #### #### #### #### #### #### #### #### #### #### ###
-
-
 
 # ### ### ### ### ### ### ### ###
 # Benchmarking 
@@ -44,6 +42,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # http://www.schneems.com/2015/05/11/how-ruby-uses-memory.html
 gem 'derailed_benchmarks', group: :development
 gem 'stackprof', group: :development
+
 
 
 # ### ### ### ### ### ### ### ###
@@ -116,9 +115,8 @@ gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'haml-rails', '~> 0.9.0'
 # Bootstrap templates https://github.com/twbs/bootstrap-rubygem
 #gem 'bootstrap', '~> 4.0.0.alpha5'
-# Bootswatch themes https://github.com/maxim/bootswatch-rails
+# https://github.com/twbs/bootstrap-sass
 gem 'bootstrap-sass', '~> 3.3.6'
-gem 'bootswatch-rails'
 # Easily include static pages https://github.com/thoughtbot/high_voltage
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
@@ -142,7 +140,9 @@ gem 'shog', :groups => [:development, :test]
 # gem 'logstasher', :groups => [:development, :test]
 
 
+
 # ### ### ### ### ### ### ### ###
 # App Specific Gems
 # ### ### ### ### ### ### ### ###
+
 

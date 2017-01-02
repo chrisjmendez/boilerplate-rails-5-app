@@ -1,57 +1,85 @@
-%nav.navbar.navbar-default
-  .container-fluid
-    .navbar-header
-      %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
-        %span.sr-only Toggle navigation
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      %a.navbar-brand{:href => "/"} Boilerplate Rails 5
-    #bs-example-navbar-collapse-1.collapse.navbar-collapse
-      %ul.nav.navbar-nav
+/ Menu
+.nav-container
+  %ul.nav
+    %li
+      %a{:href => "#"} Portfolio
+      %ul.dropdown
         %li
-          %a{:href => "/about"}
-            About
-            %span.sr-only (current)
-        %li.dropdown
-          %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-            My Account
-            %span.caret
-          %ul.dropdown-menu{:role => "menu"}
-            - if user_signed_in?
-              %li
-                = link_to_unless_current "My Account", "/edit_registration"
-              %li.divider
-              %li
-                = link_to_unless_current "#{current_user.email}", edit_user_password_path
-              %li
-                %a{:href => "/sign_out"} Sign Out
-            - else
-              %li
-                %a{:href => "/sign_in"} Sign In
-              %li.divider
-              %li
-                %a{:href => "/sign_up"} Register
-
-      %form.navbar-form.navbar-left{:role => "search"}
-        .form-group
-          %input.form-control{:placeholder => "Search", :type => "text"}/
-        %button.btn.btn-default{:type => "submit"} Submit
-
-      %ul.nav.navbar-nav.navbar-right
-        %li.dropdown
-          %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-            Useful Links
-            %span.caret
-          %ul.dropdown-menu{:role => "menu"}
-            %li
-              %a{:href => "https://github.com/chrisjmendez/boilerplate-rails-5-app", target: "_new"} Github Repo
-            %li.divider
-            %li
-              %a{:href => "http://bootswatch.com/paper/", target: "_new"} Bootswatch Theme
-            %li
-              %a{:href => "http://htmltohaml.com/", target: "_new"} HTML to HAML
-            %li
-              %a{:href => "http://js2.coffee/", target: "_new"} Javascript to CoffeeScript
-            %li
-              %a{:href => "http://fontawesome.io/icons/", target: "_new"} Font Awesome
+          %a{:href => "pages/portfolio-3-col.html"} 3 Columns - Masonry
+        %li
+          %a{:href => "pages/portfolio-no-spacing.html"} 3 Columns - No Spacing
+        %li
+          %a{:href => "pages/portfolio-lightbox.html"} Lightbox Portfolio
+        %li
+          %a{:href => "pages/portfolio-single.html"} Single Item #1
+        %li
+          %a{:href => "pages/portfolio-single-2.html"} Single Item #2
+    %li
+      %a{:href => "#"} Pages
+      %ul.dropdown
+        %li
+          %a{:href => "index.html"} Home
+        %li
+          %a{:href => "pages/about-us.html"} About Us
+        %li
+          %a{:href => "pages/about-me.html"} About Me
+        %li
+          %a{:href => "pages/services.html"} Services
+        %li
+          %a{:href => "pages/error-404.html"} Error 404
+        %li
+          %a{:href => "pages/contact.html"} Contact
+    %li
+      %a{:href => "#"} Blog
+      %ul.dropdown
+        %li
+          %a{:href => "pages/blog.html"} Blog - Classic
+        %li
+          %a{:href => "pages/blog-images.html"} Blog - Thumbs
+        %li
+          %a{:href => "pages/blog-post.html"} Post - Classic
+        %li
+          %a{:href => "pages/blog-post-image.html"} Post - Hero
+    %li
+      %a{:href => "#"} Features
+      %ul.dropdown
+        %li
+          %a{:href => "pages/hero-fs.html"} Fullscreen Hero
+        %li
+          %a{:href => "pages/hero-dark.html"} Dark Hero
+        %li
+          %a{:href => "pages/boxed-layout.html"} Boxed Layout
+        %li
+          %a{:href => "pages/tera-slider.html"}
+            Tera Slider
+            %span.label 3.1
+        %li
+          %a{:href => "pages/tera-carousel.html"} Carousel
+        %li
+          %a{:href => "pages/elements.html"} Elements
+        %li
+          %a{:href => "pages/menu-classic.html"} Classic Menu
+        %li
+          %a{:href => "pages/one-page.html"} One-page Website
+    %li
+      %a{:href => "#"} Shop
+      %ul.dropdown
+        %li
+          %a{:href => "pages/shop.html"} Shop overview
+        %li
+          %a{:href => "pages/product.html"} Product page
+        %li
+          %a{:href => "pages/cart.html"} Cart
+  .copyright 2016 All rights reserved.
+  .exit
+  %ul.social
+    %li
+      %a.fa.fa-twitter{:href => "#"}
+    %li
+      %a.fa.fa-dribbble{:href => "#"}
+    %li
+      %a.fa.fa-facebook{:href => "#"}
+    %li
+      %a.fa.fa-instagram{:href => "#"}
+    %li
+      %a.fa.fa-pinterest{:href => "#"}

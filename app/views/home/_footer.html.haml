@@ -1,15 +1,42 @@
-%br
-%br
-%br
-#push
-%footer.footer.navbar-bottom
-  .container-fluid
-    #bs-example-navbar-collapse-1.collapse.navbar-collapse
-      %ul.nav.navbar-nav
+
+= javascript_include_tag "javascripts/assets/bootstrap"
+= javascript_include_tag "javascripts/assets/imagesloaded.pkgd.min"
+= javascript_include_tag "javascripts/assets/validation"
+= javascript_include_tag "javascripts/assets/masonry.pkgd.min"
+= javascript_include_tag "modules/tera-slider/tera-slider"
+= javascript_include_tag "modules/tera-lightbox/tera-lightbox"
+= javascript_include_tag "javascripts/assets/animsition"
+= javascript_include_tag "javascripts/functions"
+
+%footer
+  .container.content
+    .row
+      / Contact info
+      .col-md-2
         %li= link_to "Contact Us", "#"
         %li= link_to "Terms of Use", "#"
         %li= link_to "Privacy Policy", "#"
         %li= link_to "How it Works?", "#"
-      %ul.nav.navbar-nav.navbar-right
-        %li
-          %a{:href => "https://github.com/chrisjmendez/boilerplate-rails-5-app"}= "Copyright #{Time.now.year}"
+      .col-md-2
+        %p
+          Agency Ltd
+          %br>/
+          Address 123
+          %br>/
+          12345 NY, New York
+      .col-md-8.text-right
+        / Social links
+        %ul.social
+          %li
+            %a.fa.fa-twitter{:href => "#"}
+          %li
+            %a.fa.fa-dribbble{:href => "#"}
+          %li
+            %a.fa.fa-facebook{:href => "#"}
+          %li
+            %a.fa.fa-instagram{:href => "#"}
+          %li
+            %a.fa.fa-pinterest{:href => "#"}
+        / Copyright message
+        .copyright
+          %a{:href => "https://github.com/chrisjmendez/boilerplate-rails-5-app"}= "#{Time.now.year} All Right Reserved"

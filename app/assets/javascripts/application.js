@@ -12,15 +12,30 @@
 //
 //= require jquery
 //= require jquery_ujs
+  
 //= require turbolinks
 //= require_tree .
 
 
-//CHANGED
+//CHANGED 
 
+// ////////////////////////////////////
+// BOOTSTRAP + HIGH VOLTAGE
 // Tether is for both bootstrap and high_voltage
+
 //= require tether
 //= require bootstrap-sprockets
-  
+
+
+// ////////////////////////////////////
+// VENDOR JAVASCRIPTS
+// These are theme specific javascripts
+
+
+
+
+// ////////////////////////////////////
+// PRISM
 // This makes pretty looking code highlighting
+
 //= require prism

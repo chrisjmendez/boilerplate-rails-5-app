@@ -14,28 +14,33 @@
  */
 
 // ////////////////////////////////////
-// BOOTSWATCH
+// BOOTSTRAP
 //
 
-//Import bootstrap-sprockets
+//Import bootstrap-sprockets first
 @import "bootstrap-sprockets";
-
-// Import cerulean variables
-@import "bootswatch/cerulean/variables";
 
 // Then bootstrap itself
 @import "bootstrap";
 
 // And finally bootswatch style itself
-@import "bootswatch/paper/bootswatch";
+@import "base";
+
+
+
+// ////////////////////////////////////
+// Theme
+// Note: config/application.rb 
 
 // Whatever application styles you have go last
-@import "base";
+@import "stylesheets/base";
+
+
 
 // ////////////////////////////////////
 // FONT AWESOME
 //
+
 @import "font-awesome-sprockets";
 @import "font-awesome";
-
 @import "font-config";
