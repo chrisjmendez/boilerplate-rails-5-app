@@ -1,0 +1,15 @@
+/ Hero
+%section.hero.fs.vcenter
+  / Background
+  .bg.faded-subtle.parallax{:style => "background-image: url(#{image_path('office/05.jpg')});"}
+  .container.text-center
+    / Content
+    .content
+      %h1.lg Lost?
+      .row
+        %form.col-md-offset-4.col-md-4
+          .input-group
+            %input.form-control{:placeholder => "Search this site ...", :type => "text"}/
+            %span.input-group-btn
+              %button.btn.btn-default{:type => "button"}
+                .fa.fa-search

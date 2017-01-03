@@ -1,0 +1,192 @@
+%section.hero.lg.vcenter
+  / Background
+  .bg.parallax{:style => "background-image: url(#{image_path('office/03.jpg')});"}
+  .container.text-center
+    / Content
+    %h1.lg Services
+%section
+  .container.content
+    .row
+      .col-md-3.service
+        .icon.ion-lightbulb.item
+        %h4 Concept
+        %p We bring ideas to live. Lorem ipsum dolor sit amet.
+      .col-md-3.service
+        .icon.ion-camera.item
+        %h4 Photography
+        %p We bring ideas to live. Lorem ipsum dolor sit amet.
+      .col-md-3.service
+        .icon.ion-monitor.item
+        %h4 Design
+        %p We bring ideas to live. Lorem ipsum dolor sit amet.
+      .col-md-3.service
+        .icon.ion-stats-bars.item
+        %h4 Analytics
+        %p We bring ideas to live. Lorem ipsum dolor sit amet.
+      .col-md-3.service
+        .icon.ion-email.item
+        %h4 Great support
+        %p We bring ideas to live. Lorem ipsum dolor sit amet.
+      .col-md-3.service
+        .icon.ion-pizza.item
+        %h4 Great food
+        %p We bring ideas to live. Lorem ipsum dolor sit amet.
+      .col-md-3.service
+        .icon.ion-erlenmeyer-flask.item
+        %h4 Research
+        %p We bring ideas to live. Lorem ipsum dolor sit amet.
+      .col-md-3.service
+        .icon.ion-coffee.item
+        %h4 Cappuccino
+        %p We bring ideas to live. Lorem ipsum dolor sit amet.
+%section.top-line
+  .container.content
+    .row
+      .col-md-6
+        %img.standalone{:src => "#{image_path('shop/01.jpg')}"}/
+      .col-md-5.col-md-offset-1
+        .intro
+          %h2 Our Skillset
+        %h5 Design
+        .progress
+          .progress-bar.progress-bar-accent{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "100", :role => "progressbar", :style => "width: 100%"}
+        %h5 Development
+        .progress
+          .progress-bar.progress-bar-accent{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "80", :role => "progressbar", :style => "width: 80%"}
+        %h5 Research
+        .progress
+          .progress-bar.progress-bar-accent{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "70", :role => "progressbar", :style => "width: 70%"}
+        %h5 Marketing
+        .progress
+          .progress-bar.progress-bar-accent{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "60", :role => "progressbar", :style => "width: 60%"}
+        %h5 Concept
+        .progress
+          .progress-bar.progress-bar-accent{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "90", :role => "progressbar", :style => "width: 90%"}
+        %h5 Branding
+        .progress
+          .progress-bar.progress-bar-accent{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "80", :role => "progressbar", :style => "width: 80%"}
+%section.content.container.top-line
+  .row
+    .col-md-10.col-md-offset-1.text-center
+      .intro
+        %h2.title A fantastic price
+      .row
+        .col-md-4
+          .plan.item
+            %h3 Silver
+            .price
+              € 20
+              %span /m
+            %ul
+              %li
+                %strong Basic support
+              %li
+                %strong Basic features
+              %li
+                %strong Basic documentation
+              %li 10 Iterations
+              %li Basic concept
+              %li 10 Websites
+              %li 1TB Bandwidth
+            %a.btn.btn-default{:href => "#"} View plan
+        .col-md-4
+          .plan.highlighted.item
+            %h3 Gold
+            .price
+              € 40
+              %span /m
+            %ul
+              %li
+                %strong Premium support
+              %li
+                %strong Premium features
+              %li
+                %strong Premium documentation
+              %li 25 Iterations
+              %li Premium concept
+              %li 25 Websites
+              %li 2.5TB Bandwidth
+            %a.btn.btn-default{:href => "#"} View plan
+        .col-md-4
+          .plan.item
+            %h3 Diamond
+            .price
+              € 55
+              %span /m
+            %ul
+              %li
+                %strong Unlimited support
+              %li
+                %strong Unlimited features
+              %li
+                %strong Unlimited documentation
+              %li Unlimited Iterations
+              %li Unlimited concept
+              %li Unlimited Websites
+              %li Unlimited Bandwidth
+            %a.btn.btn-default{:href => "#"} View plan
+%section.gray
+  .container.content
+    .row
+      .col-md-6
+        %h2 Our awesome team
+        %p We love design, so much we breathe it. We make things for the better. Our team is specialized in both visual design and webdevelopment.
+  .container.content
+    .row
+      .col-md-4
+        / Profile
+        .profile.item
+          %h4 Dave Jenkins
+          %p Designer
+          %ul.social
+            %li
+              %a.fa.fa-dribbble{:href => "#"}
+            %li
+              %a.fa.fa-instagram{:href => "#"}
+            %li
+              %a.fa.fa-pinterest{:href => "#"}
+          %img{:alt => "", :src => "#{image_path('portraits/03.jpg')}"}/
+      .col-md-4
+        / Profile
+        .profile.item
+          %h4 Caroline Johnson
+          %p Photographer
+          %ul.social
+            %li
+              %a.fa.fa-twitter{:href => "#"}
+            %li
+              %a.fa.fa-flickr{:href => "#"}
+            %li
+              %a.fa.fa-instagram{:href => "#"}
+            %li
+              %a.fa.fa-pinterest{:href => "#"}
+          %img{:alt => "", :src => "#{image_path('portraits/02.jpg')}"}/
+      .col-md-4
+        / Profile
+        .profile.item
+          %h4 Jane Finch
+          %p Developer
+          %ul.social
+            %li
+              %a.fa.fa-twitter{:href => "#"}
+            %li
+              %a.fa.fa-facebook{:href => "#"}
+            %li
+              %a.fa.fa-pinterest{:href => "#"}
+          %img{:alt => "", :src => "#{image_path('portraits/01.jpg')}"}/
+%section
+  .container.content
+    .row
+      .col-md-6
+        %h2 Our office
+        %p
+          Our office is awesome, just like our team. Want to visit us?
+          %br>/
+          Come over and have a pizza together!
+  .container
+    .grid
+      .grid-sizer
+      .grid-item.large
+        .thumb{:style => "background-image: url(#{image_path('office/02.jpg')})"}
+      .grid-item.tall
+        .thumb{:style => "background-image: url(#{image_path('office/01.jpg')})"}

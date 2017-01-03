@@ -1,0 +1,59 @@
+%section.hero.xs.vbottom
+  .container
+    %h1 Basket
+%section.content
+  .container
+    %table.table
+      %tr
+        %th Item
+        %th.description Description
+        %th Price
+        %th Quantity
+        %th.total-price Total
+        %th
+      %tr.cart-item
+        %td
+          %img.thumb{:alt => "", :src => "#{image_path('shop/08.jpg')}"}/
+        %td.description Tunes on Vinyl
+        %td.price $15.00
+        %td
+          %form
+            %input.quantity{:min => "1", :type => "number", :value => "2"}/
+        %td.total-price $30.00
+        %td
+          %a.btn.btn-hollow.remove-from-cart.ion-ios-close-empty{:href => "#"}
+      %tr.cart-item
+        %td
+          %img.thumb{:alt => "", :src => "#{image_path('shop/05.jpg')}"}/
+        %td.description Hoody Dark Gray - Size M
+        %td.price 29.00
+        %td
+          %form
+            %input.quantity{:min => "1", :type => "number", :value => "1"}/
+        %td.total-price $29.00
+        %td
+          %a.btn.btn-hollow.remove-from-cart.ion-ios-close-empty{:href => "#"}
+    %table.table.checkout
+      %tr
+        %td.coupon
+          %input.form-control.coupon-code{:placeholder => "Coupon Code", :type => "text"}/
+          %a.btn.btn-hollow.apply-coupon{:href => "#"} Apply
+        %td.checkout-update
+          %a.btn.btn-hollow.pull-right{:href => "#"} Update Cart
+          %a.btn.btn-default.pull-right{:href => "#"} Checkout
+  .container
+    .row
+      .col-md-4.col-md-offset-8
+        %h3 Totals
+        %table.table
+          %tr
+            %td Subtotal
+            %td.text-right $59.00
+          %tr
+            %td Shipping
+            %td.text-right $4.95
+          %tr
+            %td
+              %strong Total
+            %td.text-right
+              %strong $63.95

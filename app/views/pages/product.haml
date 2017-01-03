@@ -1,0 +1,86 @@
+%section.content
+  .container
+    .row
+      .col-md-12
+        %ul.breadcrumbs
+          %li
+            %a{:href => "/pages/shop"} Shop
+          %li Skull Poster
+  .container.intro
+    .row
+      .col-md-6
+        .product.slider{:indicators => "true"}
+          %ul.slides
+            %li.slide
+              %img{:alt => "", :src => "#{image_path('shop/01.jpg')}"}/
+            %li.slide
+              %img{:alt => "", :src => "#{image_path('shop/01b.jpg')}"}/
+            %li.slide
+              %img{:alt => "", :src => "#{image_path('shop/02.jpg')}"}/
+      .col-md-6
+        .product-description
+          %h1 Skull poster
+          %p This awesome skull poster will rock your room, consectetur adipiscing elit. Aenean molestie. Vestibulum magna leo, auctor porta iaculis ut, tincidunt at diam. Donec ac scelerisque tellus.
+          .price
+            .inner.old $149.00
+            .new $99.00
+          %form.purchase
+            %input.quantity{:min => "1", :type => "number", :value => "1"}/
+            %a.btn.btn-default.add-to-cart{:href => "#"} Add to cart
+          .tabs
+            %ul.nav.nav-tabs{:role => "tablist"}
+              %li.active{:role => "presentation"}
+                %a{"aria-controls" => "first", "data-toggle" => "tab", :href => "#first", :role => "tab"} Description
+              %li{:role => "presentation"}
+                %a{"aria-controls" => "second", "data-toggle" => "tab", :href => "#second", :role => "tab"} Reviews
+            .tab-content
+              #first.fade.in.tab-pane.active{:role => "tabpanel"}
+                %p Morbi nec egestas justo. Phasellus porttitor dignissim nunc in molestie. Integer facilisis semper tellus et ornare. Morbi id finibus ante, vel consequat ligula. Praesent tristique sapien et eros mattis commodo. Phasellus luctus, eros ut posuere dapibus, orci metus faucibus purus, non pulvinar nisl ex luctus neque. Quisque finibus arcu sit amet turpis consequat, ac feugiat felis tincidunt.
+              #second.fade.tab-pane{:role => "tabpanel"}
+                .intro
+                  %p There are no reviews yet.
+                %h4 Add a review
+                %form#review
+                  .row
+                    .col-md-6
+                      %input.form-control{:name => "name", :placeholder => "* Your name", :required => "", :type => "text"}/
+                    .col-md-6
+                      %input.form-control{:name => "email", :placeholder => "* E-mail", :required => "", :type => "email"}/
+                    .col-md-12
+                      %textarea.form-control{:name => "message", :placeholder => "* Message", :required => ""}
+                      %button#send.btn.btn-default{:type => "submit"} Send
+  .container
+    .intro
+      %h2 Related products
+    .grid.shop
+      .grid-sizer
+      / Shop item
+      .grid-item.square
+        .thumb{:style => "background-image: url(#{image_path('shop/04.jpg')})"}
+        %a.caption{:href => "/pages/product"}
+          .inner
+            %h4 Concept
+            .price
+              .old &amp;dollar;100.00
+              .new &amp;dollar;80.00
+        %a.add-to-cart.btn.btn-hollow{:href => "/pages/cart"} Add to cart
+      / Shop item
+      .grid-item.square
+        .thumb{:style => "background-image: url(#{image_path('shop/02.jpg')})"}
+        %a.caption{:href => "/pages/product"}
+          .inner
+            %h4 Concept
+            .price
+              .old &amp;dollar;100.00
+              .new &amp;dollar;80.00
+        %a.add-to-cart.btn.btn-hollow{:href => "/pages/cart"} Add to cart
+      / Shop item
+      .grid-item.square
+        .thumb{:style => "background-image: url(#{image_path('shop/03.jpg')})"}
+        %a.caption{:href => "/pages/product"}
+          .inner
+            %h4 Concept
+            .price
+              .old &amp;dollar;100.00
+              .new &amp;dollar;80.00
+        %a.add-to-cart.btn.btn-hollow{:href => "/pages/cart"} Add to cart

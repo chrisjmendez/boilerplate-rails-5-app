@@ -1,0 +1,53 @@
+/ Hero
+%section.hero.lg.behind.vbottom
+  / Background
+  .bg.parallax{:style => "background-image: url(#{image_path('02.jpg')});"}
+  .container
+    / Content
+    .content
+      .row
+        .col-md-7
+          %h1 Ways to contact us
+          %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam molestie lacus in ante vestibulum, vitae aliquam felis feugiat. Nullam euismod risus.
+%section
+  .container
+    / Portfolio grid
+    .grid.contact-container
+      .grid-sizer
+      .grid-item.contact-form
+        .inner
+          %form#form{:action => "/php/mail.php", :name => "form"}
+            .row
+              .col-md-6
+                %input.form-control{:name => "name", :placeholder => "* Your name", :required => "", :type => "text"}/
+              .col-md-6
+                %input.form-control{:name => "email", :placeholder => "* E-mail", :required => "", :type => "email"}/
+              .col-md-6
+                %input.form-control{:name => "phone", :placeholder => "Phone number", :type => "text"}/
+              .col-md-6
+                %input.form-control{:name => "website", :placeholder => "Website", :type => "text"}/
+              .col-md-12
+                %textarea.form-control{:name => "message", :placeholder => "* Message", :required => ""}
+                %button#send.btn.btn-default{:type => "submit"} Send
+      .grid-item.contact-details.vcenter
+        .inner
+          %p
+            %span.bold.accent Bone Agency Ltd
+            = succeed "Designstreet" do
+              %br/
+            = succeed "12345" do
+              %br/
+          %p
+            P (+1) 0 123 456 78
+            %br>/
+            F (+1) 0 123 456 78
+            %br>/
+            M email@example.com
+    .grid
+      .grid-sizer
+      .grid-item
+        .thumb{:style => "background-image: url(#{image_path('thumbs/10.png')})"}
+      .grid-item.large
+        .thumb{:style => "background-image: url(#{image_path('office/01.jpg')})"}
+      .grid-item
+        .thumb{:style => "background-image: url(#{image_path('office/02.jpg')})"}

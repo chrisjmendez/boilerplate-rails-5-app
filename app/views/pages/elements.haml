@@ -1,0 +1,299 @@
+%section.hero.vcenter
+  / Background
+  .bg.parallax{:style => "background-image: url(#{image_path('02.jpg')});"}
+  .container.text-center
+    / Content
+    .content
+      %h1.lg The Elements
+      %p Bone comes with a lot of features an premade elements you can use.
+%section.container.content
+  .row
+    .col-md-4
+      %h3 Typography
+      %p Finetuned for best readability.
+    .col-md-8
+      %h1 Header 1
+      %p
+        Integer
+        %a.anchor{:href => "#anchor"} An anchor link
+        et bibendum ullamcorper. Etiam hendrerit, eros et pharetra finibus, mauris sapien placerat nulla, quis maximus justo tellus nec dui. Integer at leo nulla. In ultricies eu leo nec vulputate. Nunc porta aliquam metus eget sodales. Cras convallis eget ex quis pretium. Donec scelerisque venenatis lorem in hendrerit.
+      %h2 Header 2
+      %p Integer dignissim ipsum et bibendum ullamcorper. Etiam hendrerit, eros et pharetra finibus, mauris sapien placerat nulla, quis maximus justo tellus nec dui. Integer at leo nulla. In ultricies eu leo nec vulputate. Nunc porta aliquam metus eget sodales. Cras convallis eget ex quis pretium. Donec scelerisque venenatis lorem in hendrerit.
+      %h3 Header 3
+      %p
+        Integer dignissim ipsum et bibendum ullamcorper.
+        = succeed "," do
+          %strong Some bold text here
+      %h4 Header 4
+      %p Integer dignissim ipsum et bibendum ullamcorper. Etiam hendrerit, eros et pharetra finibus, mauris sapien placerat nulla, quis maximus justo tellus nec dui. Integer at leo nulla. In ultricies eu leo nec vulputate. Nunc porta aliquam metus eget sodales. Cras convallis eget ex quis pretium. Donec scelerisque venenatis lorem in hendrerit.
+      %h5 Header 5
+      %p Integer dignissim ipsum et bibendum ullamcorper. Etiam hendrerit, eros et pharetra finibus, mauris sapien placerat nulla, quis maximus justo tellus nec dui. Integer at leo nulla. In ultricies eu leo nec vulputate. Nunc porta aliquam metus eget sodales. Cras convallis eget ex quis pretium. Donec scelerisque venenatis lorem in hendrerit.
+      %h6 Header 6
+      %p Integer dignissim ipsum et bibendum ullamcorper. Etiam hendrerit, eros et pharetra finibus, mauris sapien placerat nulla, quis maximus justo tellus nec dui. Integer at leo nulla. In ultricies eu leo nec vulputate. Nunc porta aliquam metus eget sodales. Cras convallis eget ex quis pretium. Donec scelerisque venenatis lorem in hendrerit.
+      %blockquote Hey there! This is an example quote, as you can see...
+%section#anchor.content.container.top-line
+  .row
+    .col-md-4
+      %h3 Buttons
+      %p You can customize these buttons.
+    .col-md-8
+      .row
+        .col-md-3
+          %p
+            %a.btn.btn-default{:href => "#"} Button
+          %p
+            %a.btn.btn-lg.btn-default{:href => "#"} Button large
+          %p
+            %a.btn.btn-lg.btn-default{:href => "#"}
+              Icon Button
+              %span.right.ion-paper-airplane
+          %p
+            %a.btn.btn-accent{:href => "#"} Accent button
+        .col-md-3
+          %p
+            %a.btn.btn-default{:href => "#"}
+              Button
+              %span.right.fa.fa-chevron-right
+          %p
+            %a.btn.btn-lg.btn-default{:href => "#"}
+              Button
+              %span.right.fa.fa-chevron-right
+          %p
+            %a.btn.btn-lg.btn-default{:href => "#"}
+              Icon Button
+              %span.right.ion-trash-a
+          %p
+            %a.btn.btn-accent{:href => "#"}
+              Accent button
+              %span.right.ion-flash
+        .col-md-3
+          %p
+            %a.btn.btn-hollow{:href => "#"} Button
+          %p
+            %a.btn.btn-lg.btn-hollow{:href => "#"} Button large
+          %p
+            %a.btn.btn-lg.btn-default{:href => "#"}
+              Icon Button
+              %span.right.ion-chatbubble
+          %p
+            %a.btn.btn-accent{:href => "#"}
+              Accent Button
+              %span.right.ion-chatbubble
+        .col-md-3
+          %p
+            %a.btn.btn-hollow{:href => "#"}
+              Button
+              %span.right.fa.fa-chevron-right
+          %p
+            %a.btn.btn-lg.btn-hollow{:href => "#"}
+              Button
+              %span.right.fa.fa-chevron-right
+          %p
+            %a.btn.btn-lg.btn-hollow{:href => "#"}
+              Icon Button
+              %span.right.ion-person
+          %p
+            %a.btn.btn-hollow.btn-accent{:href => "#"}
+              Accent Button
+              %span.right.ion-person
+%section.container.content.top-line
+  .row
+    .col-md-4
+      %h3 Progressbars
+      %p Show off skills or completion.
+    .col-md-8
+      .progress
+        .progress-bar.progress-bar-accent{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "20", :role => "progressbar", :style => "width: 20%"}
+        %span.sr-only 20% Complete (success)
+      .progress
+        .progress-bar.progress-bar-gray{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "30", :role => "progressbar", :style => "width: 30%"}
+        %span.sr-only 30% Complete (success)
+      .progress
+        .progress-bar.progress-bar-success{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "40", :role => "progressbar", :style => "width: 40%"}
+        %span.sr-only 40% Complete (success)
+      .progress
+        .progress-bar.progress-bar-info{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "60", :role => "progressbar", :style => "width: 60%"}
+        %span.sr-only 60% Complete (success)
+      .progress
+        .progress-bar.progress-bar-warning{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "80", :role => "progressbar", :style => "width: 80%"}
+        %span.sr-only 80% Complete (success)
+      .progress
+        .progress-bar.progress-bar-danger{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "90", :role => "progressbar", :style => "width: 90%"}
+        %span.sr-only 90% Complete (success)
+      .progress
+        .progress-bar.progress-bar-danger{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "40", :role => "progressbar", :style => "width: 40%"}
+        %span.sr-only 40% Complete (success)
+        .progress-bar.progress-bar-warning{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "30", :role => "progressbar", :style => "width: 30%"}
+        %span.sr-only 30% Complete (success)
+        .progress-bar.progress-bar-default{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "20", :role => "progressbar", :style => "width: 20%"}
+        %span.sr-only 20% Complete (success)
+        .progress-bar.progress-bar-info{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "10", :role => "progressbar", :style => "width: 10%"}
+        %span.sr-only 10% Complete (success)
+%section.container.content.top-line
+  .row
+    .col-md-4
+      %h3 We heard you like tabs...
+    .col-md-8
+      .tabs
+        %ul.nav.nav-tabs{:role => "tablist"}
+          %li.active{:role => "presentation"}
+            %a{"aria-controls" => "first", "data-toggle" => "tab", :href => "#first", :role => "tab"} First one
+          %li{:role => "presentation"}
+            %a{"aria-controls" => "second", "data-toggle" => "tab", :href => "#second", :role => "tab"} Second tab
+        .tab-content
+          #first.fade.in.tab-pane.active{:role => "tabpanel"}
+            %h3 First tab
+            %p Morbi nec egestas justo. Phasellus porttitor dignissim nunc in molestie. Integer facilisis semper tellus et ornare. Morbi id finibus ante, vel consequat ligula. Praesent tristique sapien et eros mattis commodo. Phasellus luctus, eros ut posuere dapibus, orci metus faucibus purus, non pulvinar nisl ex luctus neque. Quisque finibus arcu sit amet turpis consequat, ac feugiat felis tincidunt.
+          #second.fade.tab-pane{:role => "tabpanel"}
+            %h3 Second tab
+            %img{:alt => "Bone | The Finest HTML Template", :src => "#{image_path('02.jpg')}"}/
+            %p Morbi nec egestas justo. Phasellus porttitor dignissim nunc in molestie.
+%section.container.content.top-line
+  .row
+    .col-md-4
+      %h3 Columns
+      %p Watch them being responsive!
+    .col-md-8
+      .show-columns
+        .row-fluid
+          .col-md-12 Twelve
+        .row-fluid
+          .col-md-6.col-sm-6 Six
+          .col-md-6.col-sm-6 Six
+        .row-fluid
+          .col-md-4.col-sm-4 Four
+          .col-md-4.col-sm-4 Four
+          .col-md-4.col-sm-4 Four
+        .row-fluid
+          .col-md-3.col-sm-3 Three
+          .col-md-3.col-sm-3 Three
+          .col-md-3.col-sm-3 Three
+          .col-md-3.col-sm-3 Three
+        .row-fluid
+          .col-md-2.col-sm-4 Two
+          .col-md-2.col-sm-4 Two
+          .col-md-2.col-sm-4 Two
+          .col-md-2.col-sm-4 Two
+          .col-md-2.col-sm-4 Two
+          .col-md-2.col-sm-4 Two
+        .row-fluid
+          .col-md-1.col-sm-2 One
+          .col-md-1.col-sm-2 One
+          .col-md-1.col-sm-2 One
+          .col-md-1.col-sm-2 One
+          .col-md-1.col-sm-2 One
+          .col-md-1.col-sm-2 One
+          .col-md-1.col-sm-2 One
+          .col-md-1.col-sm-2 One
+          .col-md-1.col-sm-2 One
+          .col-md-1.col-sm-2 One
+          .col-md-1.col-sm-2 One
+          .col-md-1.col-sm-2 One
+%section.content.container.top-line
+  .row
+    .col-md-3
+      %h4 Pricing tables
+    .col-md-9
+      .row
+        .col-md-4
+          .plan.item
+            %h3 Silver
+            .price
+              € 20
+              %span /m
+            %ul
+              %li
+                %strong Basic support
+              %li
+                %strong Basic features
+              %li
+                %strong Basic documentation
+              %li 10 Iterations
+              %li Basic concept
+              %li 10 Websites
+              %li 1TB Bandwidth
+            %a.btn.btn-default{:href => "#"} View plan
+        .col-md-4
+          .plan.highlighted.item
+            %h3 Gold
+            .price
+              € 40
+              %span /m
+            %ul
+              %li
+                %strong Premium support
+              %li
+                %strong Premium features
+              %li
+                %strong Premium documentation
+              %li 25 Iterations
+              %li Premium concept
+              %li 25 Websites
+              %li 2.5TB Bandwidth
+            %a.btn.btn-default{:href => "#"} View plan
+        .col-md-4
+          .plan.item
+            %h3 Diamond
+            .price
+              € 55
+              %span /m
+            %ul
+              %li
+                %strong Unlimited support
+              %li
+                %strong Unlimited features
+              %li
+                %strong Unlimited documentation
+              %li Unlimited Iterations
+              %li Unlimited concept
+              %li Unlimited Websites
+              %li Unlimited Bandwidth
+            %a.btn.btn-default{:href => "#"} View plan
+%section.container.content.intro.top-line
+  .row
+    .col-md-4
+      %h3 Profiles
+      %p Get them to know you.
+    .col-md-8
+      .row
+        .col-md-4
+          / Profile
+          .profile.item
+            %h3 Dave Jenkins
+            %p Designer
+            %ul.social
+              %li
+                %a.fa.fa-dribbble{:href => "#"}
+              %li
+                %a.fa.fa-instagram{:href => "#"}
+              %li
+                %a.fa.fa-pinterest{:href => "#"}
+            %img{:alt => "", :src => "#{image_path('portraits/03.jpg')}"}/
+        .col-md-4
+          / Profile
+          .profile.item
+            %h3 Caroline Johnson
+            %p Photographer
+            %ul.social
+              %li
+                %a.fa.fa-twitter{:href => "#"}
+              %li
+                %a.fa.fa-flickr{:href => "#"}
+              %li
+                %a.fa.fa-instagram{:href => "#"}
+              %li
+                %a.fa.fa-pinterest{:href => "#"}
+            %img{:alt => "", :src => "#{image_path('portraits/02.jpg')}"}/
+        .col-md-4
+          / Profile
+          .profile.item
+            %h3 Jane Finch
+            %p Developer
+            %ul.social
+              %li
+                %a.fa.fa-twitter{:href => "#"}
+              %li
+                %a.fa.fa-facebook{:href => "#"}
+              %li
+                %a.fa.fa-pinterest{:href => "#"}
+            %img{:alt => "", :src => "#{image_path('portraits/01.jpg')}"}/

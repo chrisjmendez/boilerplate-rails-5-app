@@ -1,6 +1,6 @@
 %section.hero.lg.vcenter
   / Background
-  .bg.parallax.faded-subtle{:style => "background-image: url(../images/office/01.jpg);"}
+  .bg.parallax.faded-subtle{:style => "background-image: url(#{image_path('office/01.jpg')});"}
   .container.text-center
     / Content
     %h1.lg About Us
@@ -13,19 +13,19 @@
   .slider.carousel{"auto-slide" => "", "data-visible" => "4"}
     %ul.slides
       %li.slide.text-center.item.vcenter
-        %img.thumb{:alt => "", :src => "../images/shop/02.jpg"}/
+        %img.thumb{:alt => "", :src => "#{image_path('shop/02.jpg')}"}/
       %li.slide.text-center.item.vcenter
-        %img.thumb{:alt => "", :src => "../images/shop/07.jpg"}/
+        %img.thumb{:alt => "", :src => "#{image_path('shop/07.jpg')}"}/
       %li.slide.text-center.item.vcenter
-        %img.thumb{:alt => "", :src => "../images/shop/04.jpg"}/
+        %img.thumb{:alt => "", :src => "#{image_path('shop/04.jpg')}"}/
       %li.slide.text-center.item.vcenter
-        %img.thumb{:alt => "", :src => "../images/shop/05.jpg"}/
+        %img.thumb{:alt => "", :src => "#{image_path('shop/05.jpg')}"}/
       %li.slide.text-center.item.vcenter
-        %img.thumb{:alt => "", :src => "../images/shop/08.jpg"}/
+        %img.thumb{:alt => "", :src => "#{image_path('shop/08.jpg')}"}/
       %li.slide.text-center.item.vcenter
-        %img.thumb{:alt => "", :src => "../images/shop/09.jpg"}/
+        %img.thumb{:alt => "", :src => "#{image_path('shop/09.jpg')}"}/
       %li.slide.text-center.item.vcenter
-        %img.thumb{:alt => "", :src => "../images/shop/10.jpg"}/
+        %img.thumb{:alt => "", :src => "#{image_path('shop/10.jpg')}"}/
   .container.content
     %h1 Our services
     %p We do this for you, because we love to do it. Lorem ipsum dolor.
@@ -58,7 +58,7 @@
       .col-md-4
         / Profile
         .profile.item
-          %img{:alt => "", :src => "../images/portraits/03.jpg"}/
+          %img{:alt => "", :src => "#{image_path('portraits/03.jpg')}"}/
           %h3 Dave Jenkins
           %p Designer
           %ul.social
@@ -71,7 +71,7 @@
       .col-md-4
         / Profile
         .profile.item
-          %img{:alt => "", :src => "../images/portraits/02.jpg"}/
+          %img{:alt => "", :src => "#{image_path('portraits/02.jpg')}"}/
           %h3 Caroline Johnson
           %p Photographer
           %ul.social
@@ -86,7 +86,7 @@
       .col-md-4
         / Profile
         .profile.item
-          %img{:alt => "", :src => "../images/portraits/01.jpg"}/
+          %img{:alt => "", :src => "#{image_path('portraits/01.jpg')}"}/
           %h3 Jane Finch
           %p Developer
           %ul.social
@@ -109,6 +109,6 @@
     .grid
       .grid-sizer
       .grid-item.large
-        .thumb{:style => "background-image: url(../images/office/02.jpg)"}
+        .thumb{:style => "background-image: url(#{image_path('office/02.jpg')})"}
       .grid-item.tall
-        .thumb{:style => "background-image: url(../images/office/01.jpg)"}
+        .thumb{:style => "background-image: url(#{image_path('office/01.jpg')})"}

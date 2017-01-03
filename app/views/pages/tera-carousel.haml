@@ -1,0 +1,26 @@
+/ Hero
+%section.hero.vcenter
+  / Background
+  .bg.faded.parallax{:style => "background-image: url(#{image_path('04.jpg')});"}
+  .container.text-center
+    / Content
+    .content
+      %h1.lg The Carousel
+      %p Since Tera Slider 3.1
+%section.on-foot
+  .slider.carousel{"auto-slide" => "", "data-visible" => "4"}
+    %ul.slides
+      %li.slide.text-center
+        %img.thumb{:alt => "", :src => "#{image_path('shop/01.jpg')}"}/
+      %li.slide.text-center
+        %img.thumb{:alt => "", :src => "#{image_path('shop/02.jpg')}"}/
+      %li.slide.text-center
+        %img.thumb{:alt => "", :src => "#{image_path('shop/08.jpg')}"}/
+      %li.slide.text-center
+        %img.thumb{:alt => "", :src => "#{image_path('shop/04.jpg')}"}/
+      %li.slide.text-center
+        %img.thumb{:alt => "", :src => "#{image_path('shop/05.jpg')}"}/
+      %li.slide.text-center
+        %img.thumb{:alt => "", :src => "#{image_path('shop/06.jpg')}"}/
+      %li.slide.text-center
+        %img.thumb{:alt => "", :src => "#{image_path('shop/07.jpg')}"}/
