@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-  
 //= require turbolinks
 //= require_tree .
 
@@ -27,15 +26,24 @@
 //= require bootstrap-sprockets
 
 
-// ////////////////////////////////////
-// VENDOR JAVASCRIPTS
-// These are theme specific javascripts
-
-
-
 
 // ////////////////////////////////////
 // PRISM
 // This makes pretty looking code highlighting
 
 //= require prism
+
+
+
+// ////////////////////////////////////
+// VENDOR JAVASCRIPTS
+// These are theme specific javascripts
+
+
+//= require javascripts/assets/bootstrap
+//= require javascripts/assets/imagesloaded.pkgd.min
+//= require javascripts/assets/validation
+//= require javascripts/assets/masonry.pkgd.min
+//= require modules/tera-lightbox/tera-lightbox
+//= require javascripts/assets/animsition
+

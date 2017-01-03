@@ -1,0 +1,41 @@
+%section
+  .container.intro
+    .row
+      .col-md-6.col-md-offset-3
+        %ul.posts
+          %li.post.item
+            .date JAN 13
+            %a{:href => "/pages/blog-post"}
+              %h1 This is some neat blog post
+              %p We love design, so much we breathe it. We make things for the better. We're specialized in both visual design and webdevelopment.
+          %li.post.item
+            .date JAN 11
+            %a{:href => "/pages/blog-post"}
+              %h1 Another super awesome post
+              %p We love design, so much we breathe it. We make things for the better. We're specialized in both visual design and webdevelopment
+          %li.post.item
+            .date JAN 10
+            %a{:href => "/pages/blog-post"}
+              %h1 Wow. This post!
+              %p We love design, so much we breathe it. We make things for the better. We're specialized in both visual design and webdevelopment
+          %li.post.item
+            .date DEC 24
+            %a{:href => "/pages/blog-post"}
+              %h1 Look at this one too!
+              %p We love design, so much we breathe it. We make things for the better. We're specialized in both visual design and webdevelopment
+          %li.post.item
+            .date APR 13
+            %a{:href => "/pages/blog-post"}
+              %h1 The first great post is here ...
+              %p We love design, so much we breathe it. We make things for the better. We're specialized in both visual design and webdevelopment
+%section.on-foot
+  .container.text-center
+    .btn-group.pagination
+      %a.btn.previous{:disabled => "disabled", :href => "#"}
+        .ion-chevron-left
+      %a.btn.active{:href => "#"} 1
+      %a.btn{:href => "#"} 2
+      %a.btn{:href => "#"} 3
+      %a.btn{:href => "#"} 4
+      %a.btn.next{:href => "#"}
+        .ion-chevron-right

@@ -1,0 +1,25 @@
+%section.hero.dark.vcenter
+  / Background
+  .bg.faded-subtle.parallax{:style => "background-image: url(#{image_path('08.jpg')});"}
+  .container.text-center
+    / Content
+    .content
+      %h1.lg Boxed.
+%section
+  .container.content
+    .row
+      .col-md-12
+        %img.item{:alt => "", :src => "#{image_path('office/04.jpg')}"}/
+        %img.item{:alt => "", :src => "#{image_path('office/03.jpg')}"}/
+  .container.content
+    .row
+      .col-md-6.col-md-offset-3
+        %blockquote.item Quitters don't win. Winners don't quit.
+  .container.content
+    .row
+      .col-md-4
+        %img.item{:alt => "", :src => "#{image_path('05.jpg')}"}/
+      .col-md-4
+        %img.item{:alt => "", :src => "#{image_path('06.jpg')}"}/
+      .col-md-4
+        %img.item{:alt => "", :src => "#{image_path('07.jpg')}"}/

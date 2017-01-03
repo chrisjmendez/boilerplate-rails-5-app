@@ -1,77 +1,221 @@
-.container
-  .bs-docs-section
+/ Hero & Tera Slider
+%section.slider
+  %ul.slides
+    / Slide
+    %li.slide
+      / Background
+      .hero.fs
+        .bg.parallax{:style => "background-image: url(#{image_path('office/03.jpg')});"}
+        .container.text-center.offset-top
+          / Content
+          .content
+            %h1.lg For Creative Professionals 
+            %h3 We are here to help.
+            %p= link_to "Read Me", "https://github.com/chrisjmendez/boilerplate-rails-5-app/blob/master/README.md", target: "_new", class: "btn btn-primary btn-lg"
+    / Slide
+    %li.slide.dark
+      / Background
+      .hero.fs.vcenter
+        .bg.faded.parallax{:style => "background-image: url(#{image_path('office/01.jpg')});"}
+        .container.text-center
+          / Content
+          .content
+            %h1.lg Creative Digital Agency
+            %h3 We are here to help.
+    / Slide
+    %li.slide.dark
+      / Background
+      .hero.fs.vbottom
+        .bg.faded-subtle.parallax{:style => "background-image: url(#{image_path('office/02.jpg')});"}
+        .container
+          / Content
+          .content
+            %h4 Design is our passion, we love, share, make and breathe it.
+%section
+  .container.content
     .row
-      .col-lg-12
-        .jumbotron
-          %h1 Ruby on Rails 5 Framework
-          %p After creating a dozen or so Ruby on Rails app, I realized I was using the same configuration over and over again. This boilerplate code is intended to simply save time building a Rails 5.0+ app.
-          %p= link_to "Read Me", "https://github.com/chrisjmendez/boilerplate-rails-5-app/blob/master/README.md", target: "_new", class: "btn btn-primary btn-lg"
-  
-  .bs-docs-section
-    .col-lg-4
-      .bs-component
-        %h2 Getting Started
-        %p
-          After downloading this repo, run these commands.
-        %p
-          Step #1
-          Install all the necessary gems.
-          %pre
-            bundle install
-        %p
-          Step #2.
-          Destroy and rebuild the test database. Populate it with test data
-          %pre
-            rails db:wipe
-        %p
-          Step #3
-          Start the server
-          %pre
-            rails server:start
-    .col-lg-4
-      %h2 GEMS
-      %p
-        These are the gems we're using for development.  
-      %ul
-        %li.text-muted= link_to "Rails Composer", "https://github.com/RailsApps/rails-composer"
-        %li.text-primary= link_to "Postgres", "https://rubygems.org/gems/pg"
-        %li.text-warning= link_to "Dotenv", "https://rubygems.org/gems/dotenv"
-        %li.text-danger= link_to "Rerun", "https://rubygems.org/gems/rerun/versions/0.11.0"
-        %li.text-success= link_to "ERB to HAML", "https://rubygems.org/gems/erb2haml"
-        %li.text-info= link_to "Devise", "https://rubygems.org/gems/devise"
-        %li.text-muted= link_to "High Voltage", "https://rubygems.org/gems/high_voltage"
-        %li.text-primary= link_to "Font Awesome", "https://rubygems.org/gems/font-awesome-rails"
-        %li.text-warning= link_to "Simple Form", "https://rubygems.org/gems/simple_form"
-        %li.text-danger= link_to "HAML", "https://rubygems.org/gems/haml"
-        %li.text-success= link_to "SASS", "https://rubygems.org/gems/sass-rails"
-        %li.text-info= link_to "Paperclip", ""
-        %li.text-muted= link_to "Bootstrap", "https://rubygems.org/gems/bootstrap"
+      .col-md-8.col-md-offset-2
+        .title-block
+          %h3 From 0 to 100
+          %h5 Now we're here
+        %p After creating a dozen or so Ruby on Rails app, I realized I was using the same configuration over and over again. This boilerplate code is intended to simply save time building a Rails 5.0+ app.
+%section.top-line
+  .container.content.text-center
+    .row
+      .col-md-3.service
+        .icon.ion-lightbulb.item
+        %h4 Utilities
+        %ul
+          %li.text-primary= link_to "Postgres", "https://rubygems.org/gems/pg"
+          %li.text-warning= link_to "Dotenv", "https://rubygems.org/gems/dotenv"
+          %li.text-danger= link_to "Rerun", "https://rubygems.org/gems/rerun/versions/0.11.0"
 
-    .col-lg-4
-      .bs-component
-        %h2 How to test this demo
-        %p
-          Try out the boilerplate code by using these two accounts.
-      .panel.panel-default
-        .panel-heading 
-          Administrator
-        .panel-body
-          Login:
-          %pre
-            = %{ #{@admin.email} }
-        .panel-body
-          Password:
-          %pre
-            password
-      .panel.panel-default
-        .panel-heading
-          User
-        .panel-body
-          Login:
-          %pre
-            = %{ #{@user.email} }
-        .panel-body
-          Password:
-          %pre
-            password
-      
+      .col-md-3.service
+        .icon.ion-camera.item
+        %h4 Views
+        %ul
+          %li.text-success= link_to "ERB to HAML", "https://rubygems.org/gems/erb2haml"
+          %li.text-primary= link_to "Font Awesome", "https://rubygems.org/gems/font-awesome-rails"
+          %li.text-warning= link_to "Simple Form", "https://rubygems.org/gems/simple_form"
+          %li.text-danger= link_to "HAML", "https://rubygems.org/gems/haml"
+          %li.text-success= link_to "SASS", "https://rubygems.org/gems/sass-rails"
+          %li.text-muted= link_to "Bootstrap", "https://rubygems.org/gems/bootstrap"
+          %li.text-muted= link_to "High Voltage", "https://rubygems.org/gems/high_voltage"
+      .col-md-3.service
+        .icon.ion-monitor.item
+        %h4 Authentication
+        %ul
+          %li.text-info= link_to "Devise", "https://rubygems.org/gems/devise"
+      .col-md-3.service
+        .icon.ion-pizza.item
+        %h4 Plug-ins
+        %ul
+          %li.text-info= link_to "Paperclip", ""
+%section.content.gray
+  .container
+    .row
+      .col-md-10.col-md-offset-1.text-center
+        .intro
+          %h2 A fantastic price
+        .row
+          .col-md-4
+            .plan.item
+              %h3 Silver
+              .price
+                € 20
+                %span /m
+              %ul
+                %li
+                  %strong Basic support
+                %li
+                  %strong Basic features
+                %li
+                  %strong Basic documentation
+                %li 10 Iterations
+                %li Basic concept
+                %li 10 Websites
+                %li 1TB Bandwidth
+              %a.btn.btn-default{:href => "#"} View plan
+          .col-md-4
+            .plan.highlighted.item
+              %h3 Gold
+              .price
+                € 40
+                %span /m
+              %ul
+                %li
+                  %strong Premium support
+                %li
+                  %strong Premium features
+                %li
+                  %strong Premium documentation
+                %li 25 Iterations
+                %li Premium concept
+                %li 25 Websites
+                %li 2.5TB Bandwidth
+              %a.btn.btn-default{:href => "#"} View plan
+          .col-md-4
+            .plan.item
+              %h3 Diamond
+              .price
+                € 55
+                %span /m
+              %ul
+                %li
+                  %strong Unlimited support
+                %li
+                  %strong Unlimited features
+                %li
+                  %strong Unlimited documentation
+                %li Unlimited Iterations
+                %li Unlimited concept
+                %li Unlimited Websites
+                %li Unlimited Bandwidth
+              %a.btn.btn-default{:href => "#"} View plan
+%section
+  .container
+    .intro
+      %h3 Work
+    / Portfolio grid
+    .grid
+      / Portfolio item
+      .grid-sizer
+      %a.grid-item{:href => "pages/portfolio-single.html"}
+        .thumb{:style => "background-image: url(#{image_path('images/thumbs/07.png')})"}
+        .caption
+          .type Photography + Video
+          .description
+            %h4 Land of God
+            %p We bring ideas to live. Lorem ipsum dolor sit amet.
+      / Portfolio item
+      %a.grid-item{:href => "pages/portfolio-single-2.html"}
+        .thumb{:style => "background-image: url(#{image_path('images/thumbs/02.png')})"}
+        .caption
+          .type Design + Art Direction
+          .description
+            %h4 Weekly Planner
+            %p We bring ideas to live. Lorem ipsum dolor sit amet.
+      / Portfolio item
+      %a.grid-item.tall{:href => "pages/portfolio-single.html"}
+        .thumb{:style => "background-image: url(#{image_path('images/thumbs/03.png')})"}
+        .caption
+          .type Design + Art Direction
+          .description
+            %h4 Suit Inc.
+            %p We bring ideas to live. Lorem ipsum dolor sit amet.
+      / Portfolio item
+      %a.grid-item{:href => "pages/portfolio-single-2.html"}
+        .thumb{:style => "background-image: url(#{image_path('images/thumbs/04.png')})"}
+        .caption
+          .type Drone + Photography
+          .description
+            %h4 Life on Mars
+            %p We bring ideas to live. Lorem ipsum dolor sit amet.
+      / Portfolio item
+      %a.grid-item{:href => "pages/portfolio-single.html"}
+        .thumb{:style => "background-image: url(#{image_path('images/thumbs/05.png')})"}
+        .caption
+          .type Design + Architecture
+          .description
+            %h4 Concept
+            %p We bring ideas to live. Lorem ipsum dolor sit amet.
+      / Portfolio item
+      %a.grid-item.large{:href => "pages/portfolio-single-2.html"}
+        .thumb{:style => "background-image: url(#{image_path('images/thumbs/06.png')})"}
+        .caption
+          .type Photography
+          .description
+            %h4 Land of God #2
+            %p We bring ideas to live. Lorem ipsum dolor sit amet.
+      / Portfolio item
+      %a.grid-item{:href => "pages/portfolio-single.html"}
+        .thumb{:style => "background-image: url(#{image_path('portraits/01.jpg')})"}
+        .caption
+          .type Photography
+          .description
+            %h4 She
+            %p Lorem ipsum dolor.
+      / Portfolio item
+      %a.grid-item{:href => "pages/portfolio-single-2.html"}
+        .thumb{:style => "background-image: url(#{image_path('portraits/02.jpg')})"}
+        .caption
+          .type Design + Art Direction
+          .description
+            %h4 Concept
+            %p We bring ideas to live. Lorem ipsum dolor sit amet.
+      / Portfolio item
+      %a.grid-item{:href => "pages/portfolio-single.html"}
+        .thumb{:style => "background-image: url(#{image_path('images/thumbs/09.png')})"}
+        .caption
+          .type Architecture + Art Direction
+          .description
+            %h4 The Architect
+            %p We bring ideas to live. Lorem ipsum dolor sit amet.
+      / Portfolio item
+      %a.grid-item.wide{:href => "pages/portfolio-single-2.html"}
+        .thumb{:style => "background-image: url(#{image_path('images/thumbs/10.png')})"}
+        .caption
+          .type Photography + Art Direction
+          .description
+            %h4 The Drive of Your Life
+            %p We bring ideas to live. Lorem ipsum dolor sit amet.

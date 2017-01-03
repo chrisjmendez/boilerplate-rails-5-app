@@ -1,0 +1,93 @@
+%section
+  .container.intro
+    .row
+      .col-md-2
+        .date JAN 13
+      .col-md-8
+        .info
+          .tags Design, webdevelopment
+          .author by Themanoid
+        .content
+          %h1 The example post
+          %p We love design, so much we breathe it. We make things for the better. Our team is specialized in both visual design and webdevelopment.
+          %img{:alt => "", :src => "../images/01.jpg"}/
+          %p We love design, so much we breathe it. We make things for the better. Our team is specialized in both visual design and webdevelopment.
+          %p
+            Sed
+            %a{:href => "#"} tristique
+            bibendum varius. Vivamus dignissim ipsum quam, ut posuere elit lacinia id. Mauris volutpat volutpat tellus ut malesuada. Donec odio justo, facilisis non sem et, malesuada sollicitudin sem. Phasellus mollis faucibus mauris non ultrices. Praesent in ipsum nec dolor ornare bibendum ut sit amet ipsum. Donec commodo, leo in hendrerit vestibulum, mauris sapien eleifend felis, sed molestie dui erat quis eros.
+          %p Fusce nec erat lacus. Nam fringilla diam sit amet odio venenatis congue. Aenean ut iaculis nisl. Nam venenatis magna in sapien faucibus, varius congue libero finibus. Fusce vel magna quis tellus finibus egestas non eu erat. Donec id ornare orci, non feugiat ante. Mauris pretium lacus turpis, vel tincidunt est laoreet eu.
+  .container
+    .row
+      .col-md-8.col-md-offset-2
+        %h3 4 Comments
+        %ul.comments
+          %li.comment
+            .thumb
+              %img{:alt => "", :src => "#{image_path('portraits/03-square.png')}"}/
+            .comment-content
+              .info
+                .author Arthur King
+                .date FEB 10 2016
+              %p Fusce nec erat lacus. Nam fringilla diam sit amet odio venenatis congue. Aenean ut iaculis nisl. Nam venenatis magna in sapien faucibus, varius congue libero finibus.
+              %button.btn.btn-empty Reply
+              %ul.comments
+                %li.comment
+                  .thumb
+                    %img{:alt => "", :src => "#{image_path('portraits/02-square.png')}"}/
+                  .comment-content
+                    .info
+                      .author Themanoid
+                      .date FEB 10 2016
+                    %p Fusce nec erat lacus. Nam fringilla diam sit amet odio venenatis congue. Aenean ut iaculis nisl. Nam venenatis magna in sapien faucibus, varius congue libero finibus.
+                    %button.btn.btn-empty Reply
+          %li.comment
+            .thumb
+              %img{:alt => "", :src => "#{image_path('portraits/01-square.png')}"}/
+            .comment-content
+              .info
+                .author William Turner
+                .date FEB 10 2016
+              %p Fusce nec erat lacus. Nam fringilla diam sit amet odio venenatis congue. Aenean ut iaculis nisl. Nam venenatis magna in sapien faucibus, varius congue libero finibus.
+              %button.btn.btn-empty Reply
+          %li.comment
+            .thumb
+              %img{:alt => "", :src => "#{image_path('portraits/02-square.png')}"}/
+            .comment-content
+              .info
+                .author Jessica Thompson
+                .date FEB 10 2016
+              %p Fusce nec erat lacus. Nam fringilla diam sit amet odio venenatis congue. Aenean ut iaculis nisl. Nam venenatis magna in sapien faucibus, varius congue libero finibus.
+              %button.btn.btn-empty Reply
+  .container
+    .row
+      .col-md-8.col-md-offset-2
+        .title-block
+          %h4 Leave a comment
+        %form.comment-form
+          .row
+            .col-md-6
+              %input.form-control{:placeholder => "Your name", :type => "text"}/
+            .col-md-6
+              %input.form-control{:placeholder => "E-mail", :type => "email"}/
+          .row
+            .col-md-12
+              %textarea.form-control{:placeholder => "Message"}
+              %button.btn.btn-default{:type => "submit"} Post comment
+%section.on-foot
+  .container
+    .row
+      .col-md-6
+        %a.previous-post{:href => "#"}
+          .arrow
+            .ion-chevron-left
+          .content
+            .title Previous
+            .post-title Lorem ipsum item
+      .col-md-6
+        %a.next-post{:href => "#"}
+          .content
+            .title Next
+            .post-title Lorem ipsum item
+          .arrow
+            .ion-chevron-right

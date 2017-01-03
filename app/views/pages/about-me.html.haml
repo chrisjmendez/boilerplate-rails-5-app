@@ -1,0 +1,79 @@
+%section.hero.lg.vcenter.light
+  / Background
+  .bg.parallax{:style => "background-image: url(#{image_path('portraits/04.jpg')});"}
+  .container.text-center
+    / Content
+    %h1.lg About Me
+%section
+  .container.content
+    .row
+      .col-md-6.col-md-offset-3.text-center
+        %h1 Boilerplate
+        %p I love design, so much I breathe it. I make things for the better. I'm specialized in both visual design and webdevelopment.
+%section.top-line
+  .container.content
+    .row
+      .col-md-6.col-md-offset-3
+        .intro
+          %h2 My expertise
+        %h5 Photoshop
+        .progress
+          .progress-bar.progress-bar-accent{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "100", :role => "progressbar", :style => "width: 100%"}
+        %h5 Sketch
+        .progress
+          .progress-bar.progress-bar-accent{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "80", :role => "progressbar", :style => "width: 80%"}
+        %h5 Jade
+        .progress
+          .progress-bar.progress-bar-accent{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "70", :role => "progressbar", :style => "width: 70%"}
+        %h5 Gulp
+        .progress
+          .progress-bar.progress-bar-accent{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "60", :role => "progressbar", :style => "width: 60%"}
+        %h5 Sass
+        .progress
+          .progress-bar.progress-bar-accent{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "80", :role => "progressbar", :style => "width: 80%"}
+%section.top-line
+  .container.content
+    %h2 My recent work
+  .container
+    .grid
+      .grid-sizer
+      / Portfolio item
+      %a.grid-item.tall.lightbox{:href => "#{image_path('images/02.jpg')}"}
+        .thumb{:style => "background-image: url(#{image_path('images/02.jpg')}"}
+        .caption
+          .type Photography + Video
+          .description
+            %h4 Land of God
+            %p We bring ideas to live. Lorem ipsum dolor sit amet.
+      / Portfolio item
+      %a.grid-item.tall.lightbox{:href => "#{image_path('images/01.jpg')}"}
+        .thumb{:style => "background-image: url(#{image_path('images/01.jpg')})"}
+        .caption
+          .type Design + Art Direction
+          .description
+            %h4 Weekly Planner
+            %p We bring ideas to live. Lorem ipsum dolor sit amet.
+      / Portfolio item
+      %a.grid-item.tall.lightbox{:href => "#{image_path('images/03.jpg')}"}
+        .thumb{:style => "background-image: url(#{image_path('images/03.jpg')})"}
+        .caption
+          .type Design + Art Direction
+          .description
+            %h4 Suit Inc.
+            %p We bring ideas to live. Lorem ipsum dolor sit amet.
+%section.top-line
+  .container.content
+    .row
+      .col-md-6
+        %h1 My office
+        %p
+          My office is awesome. Want to visit me there?
+          %br>/
+          Come over and have a pizza together!
+  .container
+    .grid
+      .grid-sizer
+      .grid-item.large
+        .thumb{:style => "background-image: url(#{image_path('images/office/02.jpg')})"}
+      .grid-item.tall
+        .thumb{:style => "background-image: url(#{image_path('images/office/01.jpg')})"}
