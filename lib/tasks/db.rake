@@ -4,6 +4,6 @@ namespace :db do
     # Safe guard #1
     raise 'You cannot run this in production' if Rails.env.production?
     # 'skip_prod' is Safe guard #2
-    [ 'skip_prod', 'db:purge', 'db:crate', 'db:migrate', 'db:seed' ]
+    [ 'skip_prod', 'db:purge', 'db:create', 'db:migrate', 'db:seed' ]
   end
 end 

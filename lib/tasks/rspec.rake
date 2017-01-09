@@ -13,4 +13,10 @@ namespace :rspec do
   task controller: :environment do
     sh %{ bundle exec rspec spec/controllers }
   end
+  
+  desc "›› Rspec run only feature specs"
+  task controller: :environment do
+    sh %{ bundle exec rspec spec/controllers }
+  end
+  
 end
