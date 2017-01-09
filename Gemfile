@@ -34,6 +34,18 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # COPY GEM'S BELOW
 # #### #### #### #### #### #### #### #### #### #### #### #### #### #### #### ###
 
+
+
+# ### ### ### ### ### ### ### ###
+# Development
+# ### ### ### ### ### ### ### ###
+
+# Better Error Reporting
+gem "better_errors", group: [:development]
+gem "binding_of_caller", group: [:development]
+
+
+
 # ### ### ### ### ### ### ### ###
 # Benchmarking 
 # https://github.com/schneems/derailed_benchmarks#dynamic-app-benchmarking
@@ -96,12 +108,21 @@ gem 'faker'
 gem 'bcrypt'
 
 # Rspec
-gem 'spring-commands-rspec', :groups => [:development, :test]
-gem 'rspec-rails', :groups => [:development, :test]
+gem 'rspec-rails', groups: [:development, :test]
+gem 'rails-controller-testing', groups: [:development, :test]
+
+# Automatically run specs https://github.com/guard/guard-rspec
+gem 'guard-rspec', require: false, groups: [:development, :test]
+gem 'spring-commands-rspec', groups: [:development, :test]
+# Automated Rspec
+gem 'guard-livereload', require: false, groups: [:development]
+# THis prevensts you from having to install a Google Chrome plug-in
+gem "rack-livereload", group: [:development]
+
 # Factory Girl
-gem 'factory_girl_rails', :groups => [:development, :test]
+gem 'factory_girl_rails', groups: [:development, :test]
 # Capybara
-gem 'capybara', :groups => [:test]
+gem 'capybara', groups: [:test]
 
 
 
