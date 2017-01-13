@@ -78,6 +78,7 @@ GEM
     coffee-script-source (1.10.0)
     colored (1.2)
     concurrent-ruby (1.0.2)
+    dalli (2.7.6)
     debug_inspector (0.0.2)
     derailed_benchmarks (1.3.1)
       benchmark-ips (~> 2)
@@ -187,6 +188,7 @@ GEM
     minitest (5.9.1)
     multi_json (1.12.1)
     nenv (0.3.0)
+    newrelic_rpm (3.17.2.327)
     nio4r (1.2.1)
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
@@ -222,10 +224,6 @@ GEM
       railties (= 5.0.0.1)
       sprockets-rails (>= 2.0.0)
     rails-assets-tether (1.3.7)
-    rails-controller-testing (1.0.1)
-      actionpack (~> 5.x)
-      actionview (~> 5.x)
-      activesupport (~> 5.x)
     rails-dom-testing (2.0.1)
       activesupport (>= 4.2.0, < 6.0)
       nokogiri (~> 1.6.0)
@@ -300,6 +298,8 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     stackprof (0.2.10)
+    sucker_punch (2.0.2)
+      concurrent-ruby (~> 1.0.0)
     therubyracer (0.12.2)
       libv8 (~> 3.16.14.0)
       ref
@@ -338,6 +338,7 @@ DEPENDENCIES
   byebug
   capybara
   coffee-rails (~> 4.2)
+  dalli
   derailed_benchmarks
   devise (~> 4.2.0)
   dotenv-rails
@@ -353,6 +354,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   listen (~> 3.0.5)
+  newrelic_rpm
   pg (~> 0.18)
   prism-rails
   puma (~> 3.0)
@@ -360,7 +362,6 @@ DEPENDENCIES
   rack-livereload
   rails (~> 5.0.0)
   rails-assets-tether (>= 1.1.0)!
-  rails-controller-testing
   rerun
   rspec-rails
   sass-rails (~> 5.0)
@@ -370,6 +371,7 @@ DEPENDENCIES
   spring-commands-rspec
   spring-watcher-listen (~> 2.0.0)
   stackprof
+  sucker_punch (~> 2.0)
   therubyracer
   turbolinks (~> 5)
   tzinfo-data

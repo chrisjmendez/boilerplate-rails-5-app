@@ -41,7 +41,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # ### ### ### ### ### ### ### ###
 
 # Better Error Reporting
+# https://github.com/charliesome/better_errors
 gem "better_errors", group: [:development]
+# Evaluate errors with context
+# https://github.com/banister/binding_of_caller
 gem "binding_of_caller", group: [:development]
 
 
@@ -51,9 +54,16 @@ gem "binding_of_caller", group: [:development]
 # https://github.com/schneems/derailed_benchmarks#dynamic-app-benchmarking
 # ### ### ### ### ### ### ### ###
 
+# Bench mark your app
+# https://github.com/schneems/derailed_benchmarks
 # http://www.schneems.com/2015/05/11/how-ruby-uses-memory.html
-gem 'derailed_benchmarks', group: :development
-gem 'stackprof', group: :development
+gem 'derailed_benchmarks', group: [:development]
+gem 'stackprof', group: [:development]
+# Monitor the health and performance of your app 
+# https://github.com/newrelic/rpm
+# Config: config/newrelic.yml
+# Usage: Heroku Production
+gem 'newrelic_rpm', groups: [:production]
 
 
 
@@ -62,6 +72,9 @@ gem 'stackprof', group: :development
 # ### ### ### ### ### ### ### ###
 
 # You may need to request from the source for Rails 5
+# https://github.com/plataformatec/devise
+# Config: config/environments/development.rb
+# Config: config/initializers/devise.rb
 gem 'devise', '~> 4.2.0'
 # https://github.com/cowboyd/therubyracer
 gem "therubyracer"
@@ -86,14 +99,19 @@ gem "therubyracer"
 gem 'rack-cors'
 # This outputs JSON
 # http://www.chrisjmendez.com/2016/07/04/rails-5-api-only-app/
+# Config: config/initializers/active_model_serializers.rb
 gem 'active_model_serializers'
-# Environmental variables
-gem 'dotenv-rails', :groups => [:development, :test]
-# Server Watcher https://github.com/alexch/rerun
-gem 'rerun', :groups => [:development, :test]
+# Store environmental variables away from git
+# https://github.com/bkeepers/dotenv
+gem 'dotenv-rails', groups: [:development, :test]
+# Server Watcher 
+# https://github.com/alexch/rerun
+gem 'rerun', groups: [:development, :test]
 # Pagination
+# https://github.com/kaminari/kaminari
 gem 'kaminari'
-# PrismJS.com
+# PrismJS.com for syntax highlighting
+# https://github.com/PrismJS/prism
 gem "prism-rails"
 
 
@@ -102,26 +120,33 @@ gem "prism-rails"
 # Testing
 # ### ### ### ### ### ### ### ###
 
-# Populate fake test data
+# Populate db/seeds.rb with fake data
+# https://github.com/stympy/faker
 gem 'faker'
-# You need this to turn a password into a hash
+# Hash a password
+# https://github.com/codahale/bcrypt-ruby
 gem 'bcrypt'
-
-# Rspec
+# Programmatic testing using Rspec
+# https://github.com/rspec/rspec-rails
 gem 'rspec-rails', groups: [:development, :test]
-gem 'rails-controller-testing', groups: [:development, :test]
-
-# Automatically run specs https://github.com/guard/guard-rspec
+# Automatically run tests through Rspec
+# https://github.com/guard/guard-rspec
 gem 'guard-rspec', require: false, groups: [:development, :test]
 gem 'spring-commands-rspec', groups: [:development, :test]
-# Automated Rspec
+# Real-time Rspec testing
+# https://github.com/guard/guard-livereload
+# Config: /Guardfile
 gem 'guard-livereload', require: false, groups: [:development]
-# THis prevensts you from having to install a Google Chrome plug-in
+# Auto refresh the browser w/o a Chrome plug-in
+# https://github.com/johnbintz/rack-livereload
+# Config: config/environments/development.rb
 gem "rack-livereload", group: [:development]
 
-# Factory Girl
+# Factory Girl for fixture replatement
+# https://github.com/thoughtbot/factory_girl_rails
 gem 'factory_girl_rails', groups: [:development, :test]
-# Capybara
+# Capybara for automated testing (w/o cucumber)
+# https://github.com/teamcapybara/capybara
 gem 'capybara', groups: [:test]
 
 
@@ -130,23 +155,30 @@ gem 'capybara', groups: [:test]
 # Views
 # ### ### ### ### ### ### ### ###
 
-# Simplified forms https://github.com/plataformatec/simple_form
+# Simplified Forms
+# https://github.com/plataformatec/simple_form
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
-# HAML template engine https://github.com/indirect/haml-rails
+# HAML templating engine
+# https://github.com/indirect/haml-rails
 gem 'haml-rails', '~> 0.9.0'
-# Bootstrap templates https://github.com/twbs/bootstrap-rubygem
+# Bootstrap templates 
+# https://github.com/twbs/bootstrap-rubygem
 #gem 'bootstrap', '~> 4.0.0.alpha5'
 # https://github.com/twbs/bootstrap-sass
 gem 'bootstrap-sass', '~> 3.3.6'
-# Easily include static pages https://github.com/thoughtbot/high_voltage
+# Easily include static pages 
+# https://github.com/thoughtbot/high_voltage
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
 end
-# Easily include static pages https://github.com/thoughtbot/high_voltage
+# Easily include static pages 
+# https://github.com/thoughtbot/high_voltage
 gem 'high_voltage'
 # Convert existing .erb to .haml
-gem 'erb2haml', :groups => [:development]
+# https://github.com/dhl/erb2haml
+gem 'erb2haml', groups: [:development]
 # Font Awesome SASS
+# https://github.com/FortAwesome/font-awesome-sass
 gem 'font-awesome-sass'
 
 
@@ -155,11 +187,28 @@ gem 'font-awesome-sass'
 # Logging
 # ### ### ### ### ### ### ### ###
 
-# Make the default logging pretty
-gem 'shog', :groups => [:development, :test]
+# Simple colored logging for Rails apps
+# https://github.com/phallguy/shog
+gem 'shog', groups: [:development, :test]
 # Advanced Logging
-# gem 'logstasher', :groups => [:development, :test]
+# https://github.com/dwbutler/logstash-logger
+# gem 'logstasher', groups: [:development, :test]
 
+
+
+
+# ### ### ### ### ### ### ### ###
+# Performance
+# ### ### ### ### ### ### ### ###
+
+# Used with Active Job for asynchronous messaging
+# https://github.com/brandonhilkert/sucker_punch
+gem 'sucker_punch', '~> 2.0'
+# Memcache for caching pages and fragments
+# https://github.com/petergoldstein/dalli
+# Usage: Heroku Production
+# Config: config/environments/production.rb
+gem 'dalli', groups: [:production]
 
 
 # ### ### ### ### ### ### ### ###

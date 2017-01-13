@@ -83,4 +83,33 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  
+  #CHANGED - Added :confirmable to Devise using http://mailgun.com
+  config.action_mailer.default_url_options = { host: ENV['HEROKU_URL'] }
+  config.action_mailer.delivery_method = :smtp  
+  config.action_mailer.perform_deliveries = true  
+  config.action_mailer.raise_delivery_errors = true 
+  config.action_mailer.smtp_settings = {
+    # Add your personal credentials through .env
+    :address   => ENV['EMAIL_SERVICE_SMTP'],
+    #:port     => 587,
+    :domain    => ENV['EMAIL_SERVICE_DOMAIN'],
+    :user_name => ENV['EMAIL_SERVICE_USER'],
+    :password  => ENV['EMAIL_SERVICE_PASS'],
+    :authentication => 'plain',
+    # http://stackoverflow.com/questions/5882855/problem-with-actionmailer-in-rails3-ssl-hostname-was-not-match-with-the-server
+    :enable_starttls_auto => true
+  }
+  
+  # Memcachier / dalli configuration
+  # https://elements.heroku.com/addons/memcachier
+  config.cache_store = :dalli_store,
+    (ENV["MEMCACHIER_SERVERS"] || "").split(","),
+    {:username => ENV["MEMCACHIER_USERNAME"],
+      :password => ENV["MEMCACHIER_PASSWORD"],
+      :failover => true,
+      :socket_timeout => 1.5,
+      :socket_failure_delay => 0.2,
+      :down_retry_delay => 60
+    }
 end

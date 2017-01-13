@@ -52,8 +52,15 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   
+
+  # CHANGED - LiveReload
+  # Add Rack::LiveReload to the bottom of the middleware stack with the default options:
+  config.middleware.insert_after ActionDispatch::Static, Rack::LiveReload
+  # or, if you're using better_errors:
+  # config.middleware.insert_before Rack::Lock, Rack::LiveReload
+
   
-  #CHANGED - Added :confirmable to Devise using http://mailgun.com
+  #CHANGED - Devise - Added :confirmable to Devise using http://mailgun.com
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_mailer.delivery_method = :smtp  
   config.action_mailer.perform_deliveries = true  

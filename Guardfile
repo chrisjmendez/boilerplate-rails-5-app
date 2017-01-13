@@ -26,7 +26,7 @@
 
 # guard :rspec, cmd: "bundle exec rspec" do
 # CHANGED #1
-guard :rspec, cmd: "rspec" do
+guard :rspec, cmd: "rspec --color --format doc" do
   require "guard/rspec/dsl"
   dsl = Guard::RSpec::Dsl.new(self)
 
