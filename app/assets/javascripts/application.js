@@ -46,4 +46,3 @@
 //= require javascripts/assets/masonry.pkgd.min
 //= require modules/tera-lightbox/tera-lightbox
 //= require javascripts/assets/animsition
-

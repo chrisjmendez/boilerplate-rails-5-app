@@ -2,6 +2,25 @@
 .nav-container
   %ul.nav
     %li
+      %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+        My Account
+        %span.caret
+      %ul.dropdown
+        - if user_signed_in?
+          %li
+            = link_to_unless_current "My Account", "/edit_registration"
+          %li.divider
+          %li
+            = link_to_unless_current "#{current_user.email}", edit_user_password_path
+          %li
+            %a{:href => "/sign_out"} Sign Out
+        - else
+          %li
+            %a{:href => "/sign_in"} Sign In
+          %li.divider
+          %li
+            %a{:href => "/sign_up"} Register  
+    %li
       %a{:href => "/"} Portfolio
       %ul.dropdown
         %li

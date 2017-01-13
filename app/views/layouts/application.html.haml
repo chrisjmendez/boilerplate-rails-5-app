@@ -16,14 +16,21 @@
     #wrapper.container-fluid.smooth-transition
       / Header
       %header
-        .container
+        .container.dark-brand
           / Branding
           %a.brand{:href => "/"}
-            =image_tag "logo-black.svg", class: "dark-brand"
-            =image_tag "logo-black.svg", class: "light-brand"
+            =image_tag "http://placehold.it/175x50", class: "dark-brand"
+            =image_tag "http://placehold.it/175x50", class: "light-brand"
           / Menu
           .menu
-        
-      = yield
+
+      %section.page-wrap.container
+        .row
+          .col-lg-12
+            = yield
     
       = render 'home/footer'
+      
+    / Note: app/javascripts/application.js also contains vendor libraries
+    = javascript_include_tag "modules/tera-slider/tera-slider"
+    = javascript_include_tag "javascripts/functions"
